@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="tr" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ALESTA TEAMS</title>
+  <meta name="description" content="ALESTA TEAMS — modern, teknolojik ve koyu temalı web sitesi." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    :root{
+      --bg-0:#0b0f14;
+      --bg-1:#0e141b;
+      --card-glass:rgba(255,255,255,0.06);
+      --card-border:rgba(255,255,255,0.15);
+      --text-0:#e6e6e6;
+      --text-1:#93a4b0;
+      --accent:#007bff; /* tek mavi tonu */
+      --accent-2:#ff3864;
+      --shadow-neon:0 0 24px rgba(0,123,255,0.25);
+    }
+    html,body{background:radial-gradient(1200px 800px at 10% 10%, #0d141b 0%, var(--bg-0) 35%), linear-gradient(180deg, var(--bg-0), var(--bg-1)); color:var(--text-0); font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;}
+    .brand-glow{color:var(--accent); text-shadow:0 0 12px rgba(0,123,255,0.6);}
+    .navbar{backdrop-filter:saturate(140%) blur(8px); background-color:rgba(10,14,18,0.6);}
+    .nav-link{font-weight:600;}
+    .nav-link.active{color:var(--accent) !important;}
+    .section{padding:80px 0;}
+    .hero{min-height:72vh; display:grid; place-items:center; text-align:center; position:relative; overflow:hidden;}
+    .hero h1{font-weight:800; letter-spacing:0.5px;}
+    .hero p{color:var(--text-1);}
+    .btn-neon{border:1px solid var(--accent); color:var(--text-0); box-shadow:var(--shadow-neon); transition:transform .2s ease, box-shadow .2s ease; background:linear-gradient(180deg, rgba(0,123,255,0.08), rgba(0,123,255,0.02));}
+    .btn-neon:hover{transform:translateY(-2px); box-shadow:0 0 32px rgba(0,123,255,0.45); background-color:#0056b3; border-color:#0056b3;}
+    .card-glass{background:var(--card-glass); border:1px solid var(--card-border); backdrop-filter:blur(10px); border-radius:16px;}
+    .card-glass:hover{border-color:rgba(255,255,255,0.28);}
+    .badge-tech{background:rgba(0,123,255,0.15); color:var(--accent); border:1px solid rgba(0,123,255,0.35);}
+    .grid-auto{display:grid; gap:24px; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));}
+    .section-title{font-weight:800; margin-bottom:18px;}
+    .section-sub{color:var(--text-1); margin-bottom:32px;}
+    .avatar{width:84px; height:84px; border-radius:50%; object-fit:cover; border:2px solid rgba(255,255,255,0.25);}
+    .role{color:var(--accent); font-weight:600;}
+    .logo-tile{display:flex; align-items:center; justify-content:center; min-height:120px; background:rgba(255,255,255,0.04); border:1px dashed rgba(255,255,255,0.18); border-radius:14px;}
+    .logo-tile img{max-height:64px; opacity:0.9;}
+    footer{border-top:1px solid rgba(255,255,255,0.12); padding:24px 0; color:var(--text-1);}
+    [data-raise]{transition:transform .25s ease, box-shadow .25s ease;}
+    [data-raise]:hover{transform:translateY(-4px);}
+    .accent-bar{height:2px; background:linear-gradient(90deg, var(--accent), var(--accent-2)); box-shadow:var(--shadow-neon);}
+    html{scroll-behavior:smooth;}
+  </style>
+</head>
+<body>
+  <!-- Buradan sonrası senin verdiğin HTML yapısı aynı kalıyor -->
+  <!-- Navbar, Hero, About, Awards, Tools, Team, Sponsors, Contact, Footer -->
+</body>
+</html>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top" style="padding-top:16px; padding-bottom:16px;">
+  <div class="container-fluid">
+    <!-- Logo + Yazı -->
+    <a class="navbar-brand fw-bold d-flex align-items-center" href="#hero" style="margin-left:24px;">
+      <img src="alesta.png" alt="Alesta Logo" width="32" height="28" style="margin-right:8px;">
+      <span style="color:#007bff;">ALESTA TEAMS</span>
+    </a>
+
+    <!-- Menü -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Menüyü Aç">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="nav" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto" style="margin-right:32px;">
+        <li class="nav-item"><a class="nav-link" href="#about">Hakkımızda</a></li>
+        <li class="nav-item"><a class="nav-link" href="#awards">Ödüllerimiz</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tools">Araçlarımız</a></li>
+        <li class="nav-item"><a class="nav-link" href="#team">Kadromuz</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sponsors">Sponsorlarımız</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">İletişim</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="accent-bar"></div>
+</nav>
+
+
+
+<!-- Hero -->
+<header id="hero" class="hero section text-center d-flex align-items-center justify-content-center">
+  <div class="container">
+    <!-- Logo -->
+    <img src="alesta.png" alt="Alesta Logo" width="240" style="max-width:100%; margin-bottom:20px;">
+
+    <!-- Yazılar -->
+    <h1 class="display-4">
+      <span style="color:#007bff;">Ready</span> 
+      <span style="color:#ffffff;">and</span> 
+      <span style="color:#007bff;">Alert</span>
+    </h1>
+
+    <p class="lead mt-2">ALESTA TEAMS — Hazır ve Tetikte</p>
+
+    <!-- Butonlar -->
+    <div class="mt-3 d-flex gap-3 justify-content-center">
+      <a href="#about" class="btn btn-neon btn-lg">
+        <i class="fa-solid fa-rocket me-2"></i> Biz Kimiz ?
+      </a>
+      <a href="#contact" class="btn btn-outline-light btn-lg">
+        <i class="fa-regular fa-envelope me-2"></i> İletişime Geç
+      </a>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Hakkımızda -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">Hakkımızda</h2>
+      <p class="section-sub">Alesta Takımı, 2019 yılında Adana Fen Lisesi’nde kurulan bir teknoloji ve mühendislik takımıdır. Takımımız, lise öğrencilerini bir araya getirerek insansız su altı araçları (AUV) alanında proje geliştirmeye ve yarışmalara katılmaya odaklanmaktadır.</p>
+      <p class="section-sub">Amacımız, gençlerin mühendislik, robotik ve yazılım konularında bilgi ve becerilerini geliştirmelerini sağlamak, aynı zamanda disiplinlerarası bir ekip çalışması ortamı sunmaktır.</p>
+      <p class="section-sub">Alesta Takımı, ulusal ve uluslararası yarışmalarda Türkiye’yi temsil ederek, öğrencilerimizin yeteneklerini ve takım ruhunu geliştirmeyi hedeflemektedir.</p>
+    </div>
+  </section>
+
+<!-- Ödüllerimiz -->
+<section id="awards" class="section">
+  <div class="container">
+    <h2 class="section-title">Başarılarımız</h2>
+    <p class="section-sub">Ulusal ve uluslararası yarışmalarda elde ettiğimiz dereceler.</p>
+
+    <!-- Satır 1: 2025 -->
+    <div class="d-flex flex-wrap justify-content-center gap-4 mb-4">
+      <div class="card-glass p-4" data-raise style="background:rgba(255,255,255,0.05);">
+        <h5 class="fw-bold">2025 🏆🛠️</h5>
+        <p>Steam Azerbaijan Festival Deep Dive - World 2 (in 2 Stages) - Best Engineering Solution Award</p>
+      </div>
+      <div class="card-glass p-4" data-raise style="background:rgba(255,255,255,0.05);">
+        <h5 class="fw-bold">2025 🏅🌊</h5>
+        <p>TEKNOFEST İnsansız Su Altı Sistemleri Temel Kategori - Finalist</p>
+      </div>
+      <div class="card-glass p-4" data-raise style="background:rgba(255,255,255,0.05);">
+        <h5 class="fw-bold">2025 🏅🌊</h5>
+        <p>TEKNOFEST İnsansız Su Altı Sistemleri İleri Kategori - Finalist (Tek Lise Takımı)</p>
+      </div>
+      <div class="card-glass p-4" data-raise style="background:rgba(255,255,255,0.05);">
+        <h5 class="fw-bold">2025 🌍🧠</h5>
+        <p>1 Idea 1 World - Altın Madalya</p>
+      </div>
+      <div class="card-glass p-4" data-raise style="background:rgba(255,255,255,0.05);">
+        <h5 class="fw-bold">2025 🌍🚀</h5>
+        <p>Singapore AUV Challenge - Finalist (Tek Türk ve Lise Takımı)</p>
+      </div>
+    </div>
+
+    <!-- Satır 2: 2024 -->
+    <div class="d-flex flex-wrap justify-content-center gap-4 mb-4">
+      <div class="card-glass p-4" data-raise style="background:rgba(255,255,255,0.05);">
+        <h5 class="fw-bold">2024 🏅🌊</h5>
+        <p>TEKNOFEST İnsansız Su Altı Sistemleri İleri Kategori - 5. (Tek Lise Takımı)</p>
+      </div>
+      <div class="card-glass p-4" data-raise style="background:rgba(255,255,255,0.05);">
+        <h5 class="fw-bold">2024 🏅🌊</h5>
+        <p>TEKNOFEST İnsansız Su Altı Sistemleri Temel Kategori - 4. & En İyi Takım Ruhu Ödülü</p>
+      </div>
+      <div class="card-glass p-4" data-raise style="background:rgba(255,255,255,0.05);">
+        <h5 class="fw-bold">2024 🌍🚀</h5>
+        <p>Singapore AUV Challenge - World 4 & Fastest AUV (Tek Türk ve Lise Takımı) & "Breaking The Surface" konferansına davet</p>
+      </div>
+    </div>
+
+    <!-- Satır 3: 2023 -->
+    <div class="d-flex flex-wrap justify-content-center gap-4 mb-4">
+      <div class="card-glass p-4" data-raise style="background:rgba(255,255,255,0.05);">
+        <h5 class="fw-bold">2023 🏆🛠️</h5>
+        <p>Steam Azerbaijan Festival Deep Dive World 1</p>
+      </div>
+      <div class="card-glass p-4" data-raise style="background:rgba(255,255,255,0.05);">
+        <h5 class="fw-bold">2023 🏅🌊</h5>
+        <p>TEKNOFEST İnsansız Su Altı Sistemleri Temel Kategori - 2. & En Özgün Yazılım Ödülü</p>
+      </div>
+    </div>
+
+    <!-- Satır 4: 2022 + 2021 -->
+    <div class="d-flex flex-wrap justify-content-center gap-4 mb-4">
+      <div class="card-glass p-4" data-raise style="background:rgba(255,255,255,0.05);">
+        <h5 class="fw-bold">2022 🏅🌊</h5>
+        <p>TEKNOFEST İnsansız Su Altı Sistemleri Temel Kategori - 2.</p>
+      </div>
+      <div class="card-glass p-4" data-raise style="background:rgba(255,255,255,0.05);">
+        <h5 class="fw-bold">2021 🏅🌊</h5>
+        <p>TEKNOFEST İnsansız Su Altı Sistemleri Temel Kategori Finalist</p>
+      </div>
+    </div>
+
+    <!-- Satır 5: 2020 + 2019 -->
+    <div class="d-flex flex-wrap justify-content-center gap-4 mb-4">
+      <div class="card-glass p-4" data-raise style="background:rgba(255,255,255,0.05);">
+        <h5 class="fw-bold">2020 🏅🌊</h5>
+        <p>TEKNOFEST İnsansız Su Altı Sistemleri Temel Kategori Finalist</p>
+      </div>
+      <div class="card-glass p-4" data-raise style="background:rgba(255,255,255,0.05);">
+        <h5 class="fw-bold">2019 🏅🌊</h5>
+        <p>TEKNOFEST İnsansız Su Altı Sistemleri Temel Kategori Finalist</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Araçlarımız -->
+<section id="tools" class="section">
+  <div class="container">
+    <h2 class="section-title">Araçlarımız</h2>
+    <p class="section-sub">Ürettiğimiz AUV ve ROV sistemleri.</p>
+
+    <!-- Satır 2: ÇÖY -->
+    <div class="d-flex align-items-center gap-4 mb-4 card-glass p-4" data-raise>
+      <img src="2.png" alt="ÇÖY Aracı" style="width:180px; border-radius:12px;">
+      <div>
+        <h5 class="fw-bold">ÇÖY</h5>
+        <p class="mb-1"><strong>Üretim:</strong> 2025 — <strong>Kullanım:</strong> Günümüzde aktif</p>
+        <p class="mb-1">Katıldığı Yarışmalar: 🏅 Teknofest 2025 İleri Kategori, 🏆 STEAM Azerbaijan Festival 2025</p>
+        <p class="text-secondary">⚙️ Alüminyum döküm üretildi, 🌊 200 metreye kadar sızdırmazlık sağlayabiliyor.</p>
+      </div>
+    </div>
+
+    <!-- Satır 3: DERİN -->
+    <div class="d-flex align-items-center gap-4 mb-4 card-glass p-4" data-raise>
+      <img src="3.png" alt="DERİN Aracı" style="width:180px; border-radius:12px;">
+      <div>
+        <h5 class="fw-bold">DERİN</h5>
+        <p class="mb-1"><strong>Üretim:</strong> 2024 — <strong>Kullanım:</strong> 2025’e kadar</p>
+        <p class="mb-1">Katıldığı Yarışmalar: 🏅 Teknofest 2024 İleri Kategori, 🌍 Singapore AUV Challenge, 🌍 1 Idea 1 World, 🏅 Teknofest 2025 Temel Kategori</p>
+        <p class="text-secondary">🔧 Sürekli geliştirilen yapıya sahip, 6-7-8 motor frameleri ile kullanıldı. Gövdesi 2 pleksiglass tüp ve CNC kesimli alüminyum parçadan oluşmaktadır.</p>
+      </div>
+    </div>
+
+    <!-- Satır 4: FIRTINA -->
+    <div class="d-flex align-items-center gap-4 mb-4 card-glass p-4" data-raise>
+      <img src="4.png" alt="FIRTINA Aracı" style="width:180px; border-radius:12px;">
+      <div>
+        <h5 class="fw-bold">FIRTINA</h5>
+        <p class="mb-1"><strong>Üretim:</strong> 2023 — <strong>Kullanım:</strong> 2023-2024</p>
+        <p class="mb-1">Katıldığı Yarışmalar: 🏅 Teknofest 2024, 🌍 1 Idea 1 World</p>
+        <p class="text-secondary">⚙️ CNC kesim yöntemi ile üretilmiş dayanıklı gövdeye sahip.</p>
+      </div>
+    </div>
+
+    <!-- Satır 5: GÜMEÇ -->
+    <div class="d-flex align-items-center gap-4 mb-4 card-glass p-4" data-raise>
+      <img src="5.png" alt="GÜMEÇ Aracı" style="width:180px; border-radius:12px;">
+      <div>
+        <h5 class="fw-bold">GÜMEÇ</h5>
+        <p class="mb-1"><strong>Üretim:</strong> 2022 — <strong>Kullanım:</strong> 2023</p>
+        <p class="mb-1">Katıldığı Yarışmalar: 🏆 Steam Azerbaijan Festival, 🌍 Singapore AUV Challenge, 🏅 Teknofest 2023</p>
+        <p class="text-secondary">🔧 Güçlü gövde yapısı ve modüler tasarım ile üretildi.</p>
+      </div>
+    </div>
+
+    <!-- Satır 6: ALESTAROV 2 -->
+    <div class="d-flex align-items-center gap-4 mb-4 card-glass p-4" data-raise>
+      <img src="6.png" alt="ALESTAROV 2 Aracı" style="width:180px; border-radius:12px;">
+      <div>
+        <h5 class="fw-bold">ALESTAROV 2</h5>
+        <p class="mb-1"><strong>Üretim:</strong> 2021 — <strong>Kullanım:</strong> 2022</p>
+        <p class="mb-1">Özellikler: ⚙️ 4 motora sahip, motorlara bağlı sistem sayesinde eksenler değiştirilebiliyor.</p>
+        <p class="text-secondary">🔧 Yenilikçi motor eksen sistemi ile deneysel bir tasarım.</p>
+      </div>
+    </div>
+
+    <!-- Satır 7: ALESTAROV -->
+    <div class="d-flex align-items-center gap-4 mb-4 card-glass p-4" data-raise>
+      <img src="7.png" alt="ALESTAROV Aracı" style="width:180px; border-radius:12px;">
+      <div>
+        <h5 class="fw-bold">ALESTAROV</h5>
+        <p class="mb-1"><strong>Üretim:</strong> 2020 — <strong>Kullanım:</strong> 2021</p>
+        <p class="mb-1">Takımın ilk araçlarından biri.</p>
+        <p class="text-secondary">⚙️ Basit ve kullanışlı yapısı ile başlangıç aşamasında önemli rol oynadı.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Kadromuz -->
+<section id="team" class="section">
+  <div class="container text-center">
+    <h2 class="section-title">Kadromuz</h2>
+
+    <!-- 1. Satır: Captain + Advisor -->
+    <div class="d-flex justify-content-center gap-4 mb-4 flex-wrap">
+      <div class="card-glass p-4" data-raise style="min-width:220px;">
+        <h6 class="fw-bold mb-1" translate="no">Mehmet Ulaç Girgin</h6>
+        <div class="role">Team Captain</div>
+      </div>
+      <div class="card-glass p-4" data-raise style="min-width:220px;">
+        <h6 class="fw-bold mb-1" translate="no">Osman Onur Dilci</h6>
+        <div class="role">Team Advisor</div>
+      </div>
+    </div>
+
+    <!-- 2. Satır: Head of’lar -->
+    <div class="d-flex justify-content-center gap-4 mb-4 flex-wrap">
+      <div class="card-glass p-4" data-raise style="min-width:220px;">
+        <h6 class="fw-bold mb-1" translate="no">Mustafa Kahramanoğulları</h6>
+        <div class="role">Head of Software</div>
+      </div>
+      <div class="card-glass p-4" data-raise style="min-width:220px;">
+        <h6 class="fw-bold mb-1" translate="no">Kağan Kaya</h6>
+        <div class="role">Head of Electronic</div>
+      </div>
+      <div class="card-glass p-4" data-raise style="min-width:220px;">
+        <h6 class="fw-bold mb-1" translate="no">Buğlem Nisan Ekinci</h6>
+        <div class="role">Head of Mechanic & PR</div>
+      </div>
+    </div>
+
+    <!-- 3. Satır: Members -->
+    <div class="d-flex justify-content-center gap-4 flex-wrap">
+      <div class="card-glass p-4" data-raise style="min-width:200px;">
+        <h6 class="fw-bold mb-1" translate="no">Emre Alperen</h6>
+        <div class="role">Member of Software</div>
+      </div>
+      <div class="card-glass p-4" data-raise style="min-width:200px;">
+        <h6 class="fw-bold mb-1" translate="no">Ulaş Doruk Seyfettinoğlu</h6>
+        <div class="role">Member of Software</div>
+      </div>
+      <div class="card-glass p-4" data-raise style="min-width:200px;">
+        <h6 class="fw-bold mb-1" translate="no">Yiğit Köylü</h6>
+        <div class="role">Member of Electronic</div>
+      </div>
+      <div class="card-glass p-4" data-raise style="min-width:200px;">
+        <h6 class="fw-bold mb-1" translate="no">Derin Nergiz</h6>
+        <div class="role">Member of Mechanic</div>
+      </div>
+      <div class="card-glass p-4" data-raise style="min-width:200px;">
+        <h6 class="fw-bold mb-1" translate="no">Beyzanur Dizman</h6>
+        <div class="role">Member of PR</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Sponsorlarımız -->
+<section id="sponsors" class="section">
+  <div class="container">
+    <h2 class="section-title">Sponsorlarımız</h2>
+    <p class="section-sub">Bizi destekleyen kurumlar.</p>
+    <div class="grid-auto">
+      <div class="logo-tile" data-raise>
+        <img src="sponsor1.png" alt="Sponsor 1">
+      </div>
+      <div class="logo-tile" data-raise>
+        <img src="sponsor2.png" alt="Sponsor 2">
+      </div>
+      <div class="logo-tile" data-raise>
+        <img src="sponsor3.png" alt="Sponsor 3">
+      </div>
+      <!-- Daha fazla sponsor eklenebilir -->
+    </div>
+  </div>
+</section>
+
+
+<!-- İletişim -->
+<section id="contact" class="section">
+  <div class="container">
+    <h2 class="section-title">İletişim</h2>
+    <p class="section-sub">Bizimle bağlantı kurun.</p>
+    <div class="row g-4">
+      
+      <!-- Form -->
+      <div class="col-md-6">
+        <div class="card-glass p-4 h-100">
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Ad Soyad</label>
+              <input type="text" class="form-control" placeholder="Adınız Soyadınız">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">E-posta</label>
+              <input type="email" class="form-control" placeholder="ornek@mail.com">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Mesaj</label>
+              <textarea class="form-control" rows="4" placeholder="Mesajınız"></textarea>
+            </div>
+            <button type="submit" class="btn btn-neon">
+              <i class="fa-regular fa-paper-plane me-2"></i> Gönder
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bağlantılar + Adres -->
+      <div class="col-md-6">
+        <div class="card-glass p-4 h-100">
+          <h6 class="fw-bold">Bağlantılar</h6>
+          <ul class="list-unstyled mb-3">
+            <li class="mb-2">
+              <i class="fa-brands fa-github me-2"></i>
+              <a href="https://github.com/alesta-teams" target="_blank" class="text-decoration-none text-light">
+                github.com/alesta-teams
+              </a>
+            </li>
+            <li class="mb-2">
+              <i class="fa-brands fa-linkedin me-2"></i>
+              <a href="https://linkedin.com/company/alesta" target="_blank" class="text-decoration-none text-light">
+                linkedin.com/company/alesta
+              </a>
+            </li>
+            <li class="mb-2">
+              <i class="fa-brands fa-instagram me-2"></i>
+              <a href="https://instagram.com/alesta_teams" target="_blank" class="text-decoration-none text-light">
+                @alesta_teams
+              </a>
+            </li>
+          </ul>
+
+          <h6 class="fw-bold">Adres</h6>
+          <p class="mb-0 text-secondary">Adana, Türkiye</p>
+          <p class="mb-0 text-secondary">Ziyapaşa, 67019. Sk. No:4, 01140 Seyhan/Adana</p>
+          <p class="mb-0">
+            <a href="https://maps.app.goo.gl/HAFFhedszr9LELV38" target="_blank" class="text-decoration-none text-info">
+              Google Maps'te Görüntüle
+            </a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container d-flex justify-content-between align-items-center">
+      <small>© 2025 ALESTA TEAMS</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Aktif link vurgusu (scroll position bazlı)
+    const sections = document.querySelectorAll('section, header');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const activateLink = id => {
+      navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
+    };
+    window.addEventListener('scroll', () => {
+      let current = 'hero';
+      sections.forEach(sec => {
+        const top = sec.offsetTop - 120;
+        if (pageYOffset >= top) current = sec.id || 'hero';
+      });
+      activateLink(current);
+    });
+  </script>
+</body>
+</html>
