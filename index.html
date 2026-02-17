@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ALESTA TEAMS - Araç Detayları</title>
+  <title>Araç Detayları</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -88,51 +88,61 @@
 <body>
 
   <!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top" style="padding-top:16px; padding-bottom:16px;">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top" style="padding-top:16px; padding-bottom:16px; backdrop-filter: saturate(140%) blur(8px); background-color: rgba(10, 14, 18, 0.6);">
   <div class="container-fluid">
     <a class="navbar-brand fw-bold d-flex align-items-center" href="#hero" style="margin-left:24px;">
       <img src="alesta.png" alt="Alesta Logo" width="32" height="28" style="margin-right:8px;">
       <span style="color:#ffffff;">ALESTA TEAMS</span>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Menüyü Aç">
       <span class="navbar-toggler-icon"></span>
     </button>
-      <div class="collapse navbar-collapse" id="nav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#coy">ÇÖY</a></li>
-          <li class="nav-item"><a class="nav-link" href="#derin">DERİN</a></li>
-          <li class="nav-item"><a class="nav-link" href="#firtina">FIRTINA</a></li>
-          <li class="nav-item"><a class="nav-link" href="#gumeç">GÜMEÇ</a></li>
-          <li class="nav-item"><a class="nav-link" href="#alestarov2">ALESTAROV 2</a></li>
-          <li class="nav-item"><a class="nav-link" href="#alestarov">ALESTAROV</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-<section id="coy" class="section text-center">
-  <div class="container">
-    <h1>ÇÖY</h1>
-    <p class="text-secondary"><strong>Üretim:</strong> 2025 | <strong>Kullanım:</strong> Günümüzde Aktif</p>
-    <img src="2.png" alt="ÇÖY Aracı" class="hero-img">
-    <div class="card-glass p-4 mt-4 text-start mx-auto" style="max-width:720px;">
-      <h5 class="fw-bold mb-3">Detaylar</h5>
-      <ul class="text-secondary">
-        <li>🏁 Seri üretime uygun tasarım: Adana Metal Sanayi’de alüminyum döküm üretimi yapılmıştır.</li>
-        <li>🌊 300 m derinliğe kadar sızdırmazlık sağlar ve suyun içinde askıda kalabilir.</li>
-        <li>🛠️ Kırmızı ve Ay Yıldızlı tasarımıyla uluslararası yarışmalarda ülkemizi temsil etmek üzere dizayn edildi.</li>
-        <li>🦆 “ÇÖY” adı, çirkin ördek yavrusu hikayesiyle benzetme sonucu verilmiştir.</li>
-        <li>🔁 Hem ROV hem de AUV olarak çalışabilen çok yönlü bir araçtır.</li>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#coy">ÇÖY</a></li>
+        <li class="nav-item"><a class="nav-link" href="#eşşek">DERİN</a></li>
+        <li class="nav-item"><a class="nav-link" href="#firtina">FIRTINA</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gumeç">GÜMEÇ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#alestarov2">ALESTAROV 2</a></li>
+        <li class="nav-item"><a class="nav-link" href="#alestarov">ALESTAROV</a></li>
       </ul>
-      <a href="https://alestateams.github.io/info/#vehicles" target="_blank" class="btn btn-neon mt-3">
-        <i class="fa-solid fa-arrow-left me-2"></i> Geri Dön
-      </a>
     </div>
   </div>
-</section>
+</nav>
+
+<!-- Navbar aktif link JS -->
+<script>
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 120; // navbar yüksekliği
+      if (pageYOffset >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
+    });
+  });
+
+  // Sayfa yüklendiğinde doğru linki aktif yap
+  window.addEventListener("load", () => {
+    const event = new Event('scroll');
+    window.dispatchEvent(event);
+  });
+</script>
 
 
-<section id="derin" class="section text-center">
+
+<section id="eşşek" class="section text-center">
   <div class="container">
     <h1>EŞŞEK</h1>
     <p class="text-secondary"><strong>Üretim:</strong> 2024 | <strong>Kullanım:</strong> 2025</p>
