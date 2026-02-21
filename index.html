@@ -23,6 +23,8 @@
       --accent:#007bff; 
       --accent-2:#ff3864;
       --shadow-neon:0 0 24px rgba(0,123,255,0.25);
+      /* Yeni Lacivert Neon Rengi */
+      --neon-navy: #000080; 
     }
     html,body{background:radial-gradient(1200px 800px at 10% 10%, #0d141b 0%, var(--bg-0) 35%), linear-gradient(180deg, var(--bg-0), var(--bg-1)); color:var(--text-0); font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; scroll-behavior: smooth;}
     
@@ -37,18 +39,23 @@
     .nav-link.active{color:var(--accent) !important;}
     .accent-bar { height:2px; background:linear-gradient(90deg, var(--accent), var(--accent-2)); box-shadow:var(--shadow-neon); width: 100%; position: absolute; bottom: 0; left: 0; }
     
-    /* Hero Stilleri */
+    /* Hero Stilleri (Güncellendi) */
     .hero{min-height:70vh; display:grid; place-items:center; text-align:center; position:relative; overflow:hidden;}
     .hero h1{font-weight:800; letter-spacing:0.5px;}
     .hero-img-frame {
-      width: 240px; 
-      height: 240px; 
+      width: 350px; /* Boyut büyütüldü */
+      height: 350px; /* Boyut büyütüldü */
       object-fit: cover; 
       border-radius: 24px; 
-      border: 3px solid rgba(255,255,255,0.2); 
-      box-shadow: 0 0 30px rgba(0,123,255,0.15);
+      /* Kalın Lacivert Neon Çerçeve */
+      border: 5px solid var(--neon-navy); 
+      box-shadow: 0 0 35px rgba(0, 0, 128, 0.8);
       margin-top: 80px; 
       margin-bottom: 24px;
+      transition: all 0.3s ease;
+    }
+    .hero-img-frame:hover {
+        box-shadow: 0 0 50px rgba(0, 0, 128, 1);
     }
 
     /* Genel Bölüm ve Kartlar */
@@ -101,6 +108,7 @@
         <li class="nav-item"><a class="nav-link" href="#alestarov2">ALESTAROV 2</a></li>
         <li class="nav-item"><a class="nav-link" href="#alestarov">ALESTAROV</a></li>
       </ul>
+      <button id="lang-btn" class="btn btn-sm btn-outline-light ms-lg-3 mt-2 mt-lg-0" style="border-radius: 20px; font-weight: 600; min-width: 80px;" onclick="toggleLanguage()">EN / TR</button>
     </div>
   </div>
   <div class="accent-bar"></div>
@@ -111,10 +119,10 @@
     <img src="plaj.jpeg" alt="Alesta Plaj" class="hero-img-frame scroll-reveal reveal-fade">
     
     <h1 class="display-4 fw-bold scroll-reveal reveal-fade" style="transition-delay: 0.1s;">
-      <span style="color:#ffffff;">Araçlarımız</span> 
+      <span style="color:#ffffff;" data-i18n="hero-title">Araçlarımız</span> 
     </h1>
 
-    <p class="lead fw-bold mb-4 scroll-reveal reveal-fade" style="color:#007bff; font-size: 1.75rem; letter-spacing: 1px; text-transform: uppercase; transition-delay: 0.2s;" translate="no">
+    <p class="lead fw-bold mb-4 scroll-reveal reveal-fade" style="color:#007bff; font-size: 1.75rem; letter-spacing: 1px; text-transform: uppercase; transition-delay: 0.2s;" translate="no" data-i18n="hero-slogan">
       ALESTA TEAMS
     </p>
   </div>
@@ -124,20 +132,20 @@
   <div class="container">
     <div class="row align-items-center g-5">
       <div class="col-lg-6 order-2 order-lg-1 scroll-reveal reveal-left text-start">
-        <h2 class="fw-bold mb-2">ÇÖY</h2>
-        <p class="text-secondary mb-4"><strong>Üretim:</strong> 2025 | <strong>Kullanım:</strong> Günümüzde Aktif</p>
+        <h2 class="fw-bold mb-2" translate="no">ÇÖY</h2>
+        <p class="text-secondary mb-4" data-i18n="coy-desc"><strong>Üretim:</strong> 2025 | <strong>Kullanım:</strong> Günümüzde Aktif</p>
         
         <div class="card-glass p-4">
-          <h5 class="fw-bold mb-3 text-primary"><i class="fa-solid fa-microchip me-2"></i>Detaylar</h5>
+          <h5 class="fw-bold mb-3 text-primary"><i class="fa-solid fa-microchip me-2"></i><span data-i18n="details-title">Detaylar</span></h5>
           <ul class="text-secondary mb-0" style="line-height: 1.8;">
-            <li>🏁 Seri üretime uygun tasarım: Adana Metal Sanayi’de alüminyum döküm üretimi yapılmıştır.</li>
-            <li>🌊 300 m derinliğe kadar sızdırmazlık sağlar ve suyun içinde askıda kalabilir.</li>
-            <li>🛠️ Kırmızı ve Ay Yıldızlı tasarımıyla uluslararası yarışmalarda ülkemizi temsil etmek üzere dizayn edildi.</li>
-            <li>🔁 Hem ROV hem de AUV olarak çalışabilen çok yönlü bir araçtır.</li>
+            <li data-i18n="coy-li1">🏁 Seri üretime uygun tasarım: Adana Metal Sanayi’de alüminyum döküm üretimi yapılmıştır.</li>
+            <li data-i18n="coy-li2">🌊 300 m derinliğe kadar sızdırmazlık sağlar ve suyun içinde askıda kalabilir.</li>
+            <li data-i18n="coy-li3">🛠️ Kırmızı ve Ay Yıldızlı tasarımıyla uluslararası yarışmalarda ülkemizi temsil etmek üzere dizayn edildi.</li>
+            <li data-i18n="coy-li4">🔁 Hem ROV hem de AUV olarak çalışabilen çok yönlü bir araçtır.</li>
           </ul>
         </div>
-        <a href="index.html#vehicles" class="btn btn-neon mt-4">
-          <i class="fa-solid fa-arrow-left me-2"></i> Ana Sayfaya Dön
+        <a href="https://alestateams.com/#vehicles" class="btn btn-neon mt-4">
+          <i class="fa-solid fa-arrow-left me-2"></i> <span data-i18n="btn-back">Ana Sayfaya Dön</span>
         </a>
       </div>
       <div class="col-lg-6 order-1 order-lg-2 scroll-reveal reveal-right text-center">
@@ -154,19 +162,22 @@
         <img src="FIRTINAfoto.jpeg" alt="FIRTINA Aracı" class="vehicle-img">
       </div>
       <div class="col-lg-6 scroll-reveal reveal-right text-start">
-        <h2 class="fw-bold mb-2">FIRTINA</h2>
-        <p class="text-secondary mb-4"><strong>Üretim:</strong> 2024 | <strong>Kullanım:</strong> 2024 - 2025</p>
+        <h2 class="fw-bold mb-2" translate="no">FIRTINA</h2>
+        <p class="text-secondary mb-4" data-i18n="firtina-desc"><strong>Üretim:</strong> 2024 | <strong>Kullanım:</strong> 2024 - 2025</p>
         
         <div class="card-glass p-4">
-          <h5 class="fw-bold mb-3 text-primary"><i class="fa-solid fa-microchip me-2"></i>Detaylar</h5>
+          <h5 class="fw-bold mb-3 text-primary"><i class="fa-solid fa-microchip me-2"></i><span data-i18n="details-title">Detaylar</span></h5>
           <ul class="text-secondary mb-0" style="line-height: 1.8;">
-            <li>🛠️ Modüler yapıya sahip olup hem AUV hem ROV olarak kullanılabilmektedir.</li>
-            <li>🏆 2 kez Teknofest, 2025 SAUVC ve 1 Idea 1 World yarışmalarında yarışmıştır.</li>
-            <li>🔩 Alüminyum CNC ana gövde ile 2 pleksi tüp birbirine bağlanır.</li>
-            <li>🔧 Arka alüminyum kapak CNC ile üretilmiş olup ön alüminyum flanş pleksi kübeyi bağlar.</li>
-            <li>📸 Pleksi tüp, kamera için geniş görüş açısı sağlar.</li>
+            <li data-i18n="firtina-li1">🛠️ Modüler yapıya sahip olup hem AUV hem ROV olarak kullanılabilmektedir.</li>
+            <li data-i18n="firtina-li2">🏆 2 kez Teknofest, 2025 SAUVC ve 1 Idea 1 World yarışmalarında yarışmıştır.</li>
+            <li data-i18n="firtina-li3">🔩 Alüminyum CNC ana gövde ile 2 pleksi tüp birbirine bağlanır.</li>
+            <li data-i18n="firtina-li4">🔧 Arka alüminyum kapak CNC ile üretilmiş olup ön alüminyum flanş pleksi kübeyi bağlar.</li>
+            <li data-i18n="firtina-li5">📸 Pleksi tüp, kamera için geniş görüş açısı sağlar.</li>
           </ul>
         </div>
+        <a href="https://alestateams.com/#vehicles" class="btn btn-neon mt-4">
+          <i class="fa-solid fa-arrow-left me-2"></i> <span data-i18n="btn-back">Ana Sayfaya Dön</span>
+        </a>
       </div>
     </div>
   </div>
@@ -176,17 +187,20 @@
   <div class="container">
     <div class="row align-items-center g-5">
       <div class="col-lg-6 order-2 order-lg-1 scroll-reveal reveal-left text-start">
-        <h2 class="fw-bold mb-2">BİSKÜVİ</h2>
-        <p class="text-secondary mb-4"><strong>Üretim:</strong> 2023 | <strong>Kullanım:</strong> 2023 - 2024</p>
+        <h2 class="fw-bold mb-2" translate="no">BİSKÜVİ</h2>
+        <p class="text-secondary mb-4" data-i18n="biskuvi-desc"><strong>Üretim:</strong> 2023 | <strong>Kullanım:</strong> 2023 - 2024</p>
         
         <div class="card-glass p-4">
-          <h5 class="fw-bold mb-3 text-primary"><i class="fa-solid fa-microchip me-2"></i>Detaylar</h5>
+          <h5 class="fw-bold mb-3 text-primary"><i class="fa-solid fa-microchip me-2"></i><span data-i18n="details-title">Detaylar</span></h5>
           <ul class="text-secondary mb-0" style="line-height: 1.8;">
-            <li>🏁 Teknofest ve 1 Idea 1 World yarışmalarında kullanılmıştır.</li>
-            <li>🔩 Alüminyum CNC ile üretilmiştir.</li>
-            <li>🔧 Geniş ve rahat iç hazne, elektronik için ideal çalışma alanı sunar.</li>
+            <li data-i18n="biskuvi-li1">🏁 Teknofest ve 1 Idea 1 World yarışmalarında kullanılmıştır.</li>
+            <li data-i18n="biskuvi-li2">🔩 Alüminyum CNC ile üretilmiştir.</li>
+            <li data-i18n="biskuvi-li3">🔧 Geniş ve rahat iç hazne, elektronik için ideal çalışma alanı sunar.</li>
           </ul>
         </div>
+        <a href="https://alestateams.com/#vehicles" class="btn btn-neon mt-4">
+          <i class="fa-solid fa-arrow-left me-2"></i> <span data-i18n="btn-back">Ana Sayfaya Dön</span>
+        </a>
       </div>
       <div class="col-lg-6 order-1 order-lg-2 scroll-reveal reveal-right text-center">
         <img src="BİSKÜVİfoto.jpeg" alt="BİSKÜVİ Aracı" class="vehicle-img">
@@ -202,18 +216,21 @@
         <img src="GÖMEÇfoto.jpeg" alt="GÜMEÇ Aracı" class="vehicle-img">
       </div>
       <div class="col-lg-6 scroll-reveal reveal-right text-start">
-        <h2 class="fw-bold mb-2">GÜMEÇ</h2>
-        <p class="text-secondary mb-4"><strong>Üretim:</strong> 2021 | <strong>Kullanım:</strong> 2022 - 2024</p>
+        <h2 class="fw-bold mb-2" translate="no">GÜMEÇ</h2>
+        <p class="text-secondary mb-4" data-i18n="gumec-desc"><strong>Üretim:</strong> 2021 | <strong>Kullanım:</strong> 2022 - 2024</p>
         
         <div class="card-glass p-4">
-          <h5 class="fw-bold mb-3 text-primary"><i class="fa-solid fa-microchip me-2"></i>Detaylar</h5>
+          <h5 class="fw-bold mb-3 text-primary"><i class="fa-solid fa-microchip me-2"></i><span data-i18n="details-title">Detaylar</span></h5>
           <ul class="text-secondary mb-0" style="line-height: 1.8;">
-            <li>🏆 2 kez Teknofest, 2023 SAF ve 2024 SAUVC yarışmalarında yer almıştır.</li>
-            <li>⚡ SAUVC’da “Dünyanın En Hızlı AUV” ödülünü kazanmıştır.</li>
-            <li>⚓ Su stabilizasyonu en iyi olan araçlardan biridir.</li>
-            <li>💡 Yenilikçi ve dengeli tasarımıyla dikkat çeker.</li>
+            <li data-i18n="gumec-li1">🏆 2 kez Teknofest, 2023 SAF ve 2024 SAUVC yarışmalarında yer almıştır.</li>
+            <li data-i18n="gumec-li2">⚡ SAUVC’da “Dünyanın En Hızlı AUV” ödülünü kazanmıştır.</li>
+            <li data-i18n="gumec-li3">⚓ Su stabilizasyonu en iyi olan araçlardan biridir.</li>
+            <li data-i18n="gumec-li4">💡 Yenilikçi ve dengeli tasarımıyla dikkat çeker.</li>
           </ul>
         </div>
+        <a href="https://alestateams.com/#vehicles" class="btn btn-neon mt-4">
+          <i class="fa-solid fa-arrow-left me-2"></i> <span data-i18n="btn-back">Ana Sayfaya Dön</span>
+        </a>
       </div>
     </div>
   </div>
@@ -223,18 +240,21 @@
   <div class="container">
     <div class="row align-items-center g-5">
       <div class="col-lg-6 order-2 order-lg-1 scroll-reveal reveal-left text-start">
-        <h2 class="fw-bold mb-2">ALESTAROV 2</h2>
-        <p class="text-secondary mb-4"><strong>Üretim:</strong> 2020 | <strong>Kullanım:</strong> 2020 - 2021</p>
+        <h2 class="fw-bold mb-2" translate="no">ALESTAROV 2</h2>
+        <p class="text-secondary mb-4" data-i18n="alesta2-desc"><strong>Üretim:</strong> 2020 | <strong>Kullanım:</strong> 2020 - 2021</p>
         
         <div class="card-glass p-4">
-          <h5 class="fw-bold mb-3 text-primary"><i class="fa-solid fa-microchip me-2"></i>Detaylar</h5>
+          <h5 class="fw-bold mb-3 text-primary"><i class="fa-solid fa-microchip me-2"></i><span data-i18n="details-title">Detaylar</span></h5>
           <ul class="text-secondary mb-0" style="line-height: 1.8;">
-            <li>⚙️ 4 motora sahip gelişmiş bir araçtır.</li>
-            <li>🛠️ Motorlara bağlı sistem sayesinde eksenler hızlıca değiştirilebilir.</li>
-            <li>🔁 Deneysel tasarım, motor performansı ve denge optimizasyonu odaklıdır.</li>
-            <li>📊 Sürekli geliştirme süreci ile takımın önemli bir adımıdır.</li>
+            <li data-i18n="alesta2-li1">⚙️ 4 motora sahip gelişmiş bir araçtır.</li>
+            <li data-i18n="alesta2-li2">🛠️ Motorlara bağlı sistem sayesinde eksenler hızlıca değiştirilebilir.</li>
+            <li data-i18n="alesta2-li3">🔁 Deneysel tasarım, motor performansı ve denge optimizasyonu odaklıdır.</li>
+            <li data-i18n="alesta2-li4">📊 Sürekli geliştirme süreci ile takımın önemli bir adımıdır.</li>
           </ul>
         </div>
+        <a href="https://alestateams.com/#vehicles" class="btn btn-neon mt-4">
+          <i class="fa-solid fa-arrow-left me-2"></i> <span data-i18n="btn-back">Ana Sayfaya Dön</span>
+        </a>
       </div>
       <div class="col-lg-6 order-1 order-lg-2 scroll-reveal reveal-right text-center">
         <img src="ALSTROV2foto.jpg" alt="ALESTAROV 2 Aracı" class="vehicle-img">
@@ -250,17 +270,20 @@
         <img src="ALSTROVfoto.jpg" alt="ALESTAROV Aracı" class="vehicle-img">
       </div>
       <div class="col-lg-6 scroll-reveal reveal-right text-start">
-        <h2 class="fw-bold mb-2">ALESTAROV</h2>
-        <p class="text-secondary mb-4"><strong>Üretim:</strong> 2019 | <strong>Kullanım:</strong> 2019 - 2020</p>
+        <h2 class="fw-bold mb-2" translate="no">ALESTAROV</h2>
+        <p class="text-secondary mb-4" data-i18n="alesta1-desc"><strong>Üretim:</strong> 2019 | <strong>Kullanım:</strong> 2019 - 2020</p>
         
         <div class="card-glass p-4">
-          <h5 class="fw-bold mb-3 text-primary"><i class="fa-solid fa-microchip me-2"></i>Detaylar</h5>
+          <h5 class="fw-bold mb-3 text-primary"><i class="fa-solid fa-microchip me-2"></i><span data-i18n="details-title">Detaylar</span></h5>
           <ul class="text-secondary mb-0" style="line-height: 1.8;">
-            <li>🏁 Takımın ilk su altı araçlarından biridir.</li>
-            <li>⚙️ Basit ve etkili tasarımı ile başlangıç aşamasında önemli görevler üstlenmiştir.</li>
-            <li>🔁 Temel AUV/ROV konseptlerinin öğrenilmesinde önemli rol oynamıştır.</li>
+            <li data-i18n="alesta1-li1">🏁 Takımın ilk su altı araçlarından biridir.</li>
+            <li data-i18n="alesta1-li2">⚙️ Basit ve etkili tasarımı ile başlangıç aşamasında önemli görevler üstlenmiştir.</li>
+            <li data-i18n="alesta1-li3">🔁 Temel AUV/ROV konseptlerinin öğrenilmesinde önemli rol oynamıştır.</li>
           </ul>
         </div>
+        <a href="https://alestateams.com/#vehicles" class="btn btn-neon mt-4">
+          <i class="fa-solid fa-arrow-left me-2"></i> <span data-i18n="btn-back">Ana Sayfaya Dön</span>
+        </a>
       </div>
     </div>
   </div>
@@ -274,11 +297,78 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-  // Navbar Akıllı Gizleme Sistemi
+  // --- Çeviri Sistemi ---
+  let currentLang = 'tr';
+
+  function toggleLanguage() {
+    currentLang = currentLang === 'tr' ? 'en' : 'tr';
+    const langBtn = document.getElementById('lang-btn');
+    if(langBtn) { 
+        langBtn.innerText = currentLang === 'en' ? 'TR / EN' : 'EN / TR'; 
+    }
+    
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (translations[key] && translations[key][currentLang]) { 
+          el.innerHTML = translations[key][currentLang]; 
+      }
+    });
+  }
+
+  const translations = {
+    'hero-title': { tr: 'Araçlarımız', en: 'Our Vehicles' },
+    'hero-slogan': { tr: 'ALESTA TEAMS', en: 'ALESTA TEAMS' },
+    'btn-back': { tr: 'Ana Sayfaya Dön', en: 'Return to Main Page' },
+    'details-title': { tr: 'Detaylar', en: 'Details' },
+
+    // ÇÖY
+    'coy-desc': { tr: '<strong>Üretim:</strong> 2025 | <strong>Kullanım:</strong> Günümüzde Aktif', en: '<strong>Production:</strong> 2025 | <strong>Status:</strong> Currently Active' },
+    'coy-li1': { tr: '🏁 Seri üretime uygun tasarım: Adana Metal Sanayi’de alüminyum döküm üretimi yapılmıştır.', en: '🏁 Suitable for mass production: Aluminum casting produced in Adana Metal Industry.' },
+    'coy-li2': { tr: '🌊 300 m derinliğe kadar sızdırmazlık sağlar ve suyun içinde askıda kalabilir.', en: '🌊 Provides sealing up to 300m depth and can remain suspended in water.' },
+    'coy-li3': { tr: '🛠️ Kırmızı ve Ay Yıldızlı tasarımıyla uluslararası yarışmalarda ülkemizi temsil etmek üzere dizayn edildi.', en: '🛠️ Designed with Red and Crescent Star design to represent our country in international competitions.' },
+    'coy-li4': { tr: '🔁 Hem ROV hem de AUV olarak çalışabilen çok yönlü bir araçtır.', en: '🔁 A versatile vehicle that can operate as both ROV and AUV.' },
+
+    // FIRTINA
+    'firtina-desc': { tr: '<strong>Üretim:</strong> 2024 | <strong>Kullanım:</strong> 2024 - 2025', en: '<strong>Production:</strong> 2024 | <strong>Usage:</strong> 2024 - 2025' },
+    'firtina-li1': { tr: '🛠️ Modüler yapıya sahip olup hem AUV hem ROV olarak kullanılabilmektedir.', en: '🛠️ Modular structure, usable as both AUV and ROV.' },
+    'firtina-li2': { tr: '🏆 2 kez Teknofest, 2025 SAUVC ve 1 Idea 1 World yarışmalarında yarışmıştır.', en: '🏆 Competed in Teknofest twice, SAUVC 2025, and 1 Idea 1 World.' },
+    'firtina-li3': { tr: '🔩 Alüminyum CNC ana gövde ile 2 pleksi tüp birbirine bağlanır.', en: '🔩 Aluminum CNC main body connects two plexiglass tubes.' },
+    'firtina-li4': { tr: '🔧 Arka alüminyum kapak CNC ile üretilmiş olup ön alüminyum flanş pleksi kübeyi bağlar.', en: '🔧 CNC-machined rear aluminum cap; front aluminum flange connects the plexiglass dome.' },
+    'firtina-li5': { tr: '📸 Pleksi tüp, kamera için geniş görüş açısı sağlar.', en: '📸 Plexiglass tube provides a wide viewing angle for the camera.' },
+
+    // BİSKÜVİ
+    'biskuvi-desc': { tr: '<strong>Üretim:</strong> 2023 | <strong>Kullanım:</strong> 2023 - 2024', en: '<strong>Production:</strong> 2023 | <strong>Usage:</strong> 2023 - 2024' },
+    'biskuvi-li1': { tr: '🏁 Teknofest ve 1 Idea 1 World yarışmalarında kullanılmıştır.', en: '🏁 Used in Teknofest and 1 Idea 1 World competitions.' },
+    'biskuvi-li2': { tr: '🔩 Alüminyum CNC ile üretilmiştir.', en: '🔩 Manufactured using Aluminum CNC.' },
+    'biskuvi-li3': { tr: '🔧 Geniş ve rahat iç hazne, elektronik için ideal çalışma alanı sunar.', en: '🔧 Wide and spacious internal chamber offers an ideal workspace for electronics.' },
+
+    // GÜMEÇ
+    'gumec-desc': { tr: '<strong>Üretim:</strong> 2021 | <strong>Kullanım:</strong> 2022 - 2024', en: '<strong>Production:</strong> 2021 | <strong>Usage:</strong> 2022 - 2024' },
+    'gumec-li1': { tr: '🏆 2 kez Teknofest, 2023 SAF ve 2024 SAUVC yarışmalarında yer almıştır.', en: '🏆 Participated in Teknofest twice, SAF 2023, and SAUVC 2024.' },
+    'gumec-li2': { tr: '⚡ SAUVC’da “Dünyanın En Hızlı AUV” ödülünü kazanmıştır.', en: '⚡ Won the "World\'s Fastest AUV" award at SAUVC.' },
+    'gumec-li3': { tr: '⚓ Su stabilizasyonu en iyi olan araçlardan biridir.', en: '⚓ One of the vehicles with the best water stabilization.' },
+    'gumec-li4': { tr: '💡 Yenilikçi ve dengeli tasarımıyla dikkat çeker.', en: '💡 Stands out with its innovative and balanced design.' },
+
+    // ALESTAROV 2
+    'alesta2-desc': { tr: '<strong>Üretim:</strong> 2020 | <strong>Kullanım:</strong> 2020 - 2021', en: '<strong>Production:</strong> 2020 | <strong>Usage:</strong> 2020 - 2021' },
+    'alesta2-li1': { tr: '⚙️ 4 motora sahip gelişmiş bir araçtır.', en: '⚙️ An advanced vehicle with 4 thrusters.' },
+    'alesta2-li2': { tr: '🛠️ Motorlara bağlı sistem sayesinde eksenler hızlıca değiştirilebilir.', en: '🛠️ Axes can be quickly changed thanks to the system connected to the motors.' },
+    'alesta2-li3': { tr: '🔁 Deneysel tasarım, motor performansı ve denge optimizasyonu odaklıdır.', en: '🔁 Experimental design focused on motor performance and balance optimization.' },
+    'alesta2-li4': { tr: '📊 Sürekli geliştirme süreci ile takımın önemli bir adımıdır.', en: '📊 A significant step for the team with its continuous development process.' },
+
+    // ALESTAROV
+    'alesta1-desc': { tr: '<strong>Üretim:</strong> 2019 | <strong>Kullanım:</strong> 2019 - 2020', en: '<strong>Production:</strong> 2019 | <strong>Usage:</strong> 2019 - 2020' },
+    'alesta1-li1': { tr: '🏁 Takımın ilk su altı araçlarından biridir.', en: '🏁 One of the team\'s first underwater vehicles.' },
+    'alesta1-li2': { tr: '⚙️ Basit ve etkili tasarımı ile başlangıç aşamasında önemli görevler üstlenmiştir.', en: '⚙️ Undertook important tasks in the initial phase with its simple and effective design.' },
+    'alesta1-li3': { tr: '🔁 Temel AUV/ROV konseptlerinin öğrenilmesinde önemli rol oynamıştır.', en: '🔁 Played an important role in learning basic AUV/ROV concepts.' }
+  };
+
+  // --- Diğer Scriptler ---
+
+  // Navbar Akıllı Gizleme
   let lastScrollTop = 0;
   const navbar = document.querySelector('.navbar');
   const scrollThreshold = 10;
-
   window.addEventListener('scroll', function() {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     if (scrollTop > lastScrollTop && scrollTop > 100) { navbar.classList.add('nav-hide'); } 
@@ -287,39 +377,29 @@
     lastScrollTop = scrollTop;
   });
 
-  // Animasyon Sistemi (Intersection Observer)
+  // Animasyon Sistemi
   document.addEventListener("DOMContentLoaded", function () {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        } else {
-          entry.target.classList.remove('active'); // Her kaydırmada animasyonu tekrar oynatır
-        }
+        if (entry.isIntersecting) { entry.target.classList.add('active'); } 
+        else { entry.target.classList.remove('active'); }
       });
     }, { threshold: 0.1 }); 
-
     document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
   });
 
   // Navbar Aktif Link Sistemi
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".nav-link");
-
   window.addEventListener("scroll", () => {
     let current = "";
     sections.forEach(section => {
       const sectionTop = section.offsetTop - 150;
-      if (pageYOffset >= sectionTop) {
-        current = section.getAttribute("id");
-      }
+      if (pageYOffset >= sectionTop) { current = section.getAttribute("id"); }
     });
-
     navLinks.forEach(link => {
       link.classList.remove("active");
-      if (link.getAttribute("href") === "#" + current) {
-        link.classList.add("active");
-      }
+      if (link.getAttribute("href") === "#" + current) { link.classList.add("active"); }
     });
   });
 </script>
