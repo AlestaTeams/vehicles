@@ -72,11 +72,11 @@
     .btn-neon{border:1px solid var(--accent); color:var(--text-0); box-shadow:var(--shadow-neon); transition:transform .2s ease, box-shadow .2s ease; background:linear-gradient(180deg, rgba(0,123,255,0.08), rgba(0,123,255,0.02));}
     .btn-neon:hover{transform:translateY(-2px); box-shadow:0 0 32px rgba(0,123,255,0.45); background-color:#0056b3; border-color:#0056b3; color: white;}
     
-    /* --- ARAÇ SLIDER GÖRSELLERİ (Detaylarla Eşit Boyutta) --- */
+    /* --- ARAÇ SLIDER GÖRSELLERİ --- */
     .vehicle-carousel {
       width: 100%;
-      height: 100%; /* Detaylar kutusu kadar uzamasını sağlar */
-      min-height: 300px; /* Mobilde çok ezilmesin diye sınır */
+      height: 100%; 
+      min-height: 300px; 
       border-radius: 16px;
       border: 2px solid rgba(255,255,255,0.1);
       box-shadow: 0 10px 30px rgba(0,0,0,0.5);
@@ -97,7 +97,7 @@
 
     .vehicle-img-slide {
       width: 100%;
-      height: 100%; /* Kutu ne kadar uzarsa fotoyu da o kadar doldurur */
+      height: 100%; 
       object-fit: cover;
     }
     
@@ -135,7 +135,7 @@
 
 <nav class="navbar navbar-expand-lg fixed-top" style="padding-top:16px; padding-bottom:16px;">
   <div class="container">
-    <a class="navbar-brand fw-bold d-flex align-items-center" href="https://alestateams.com" style="margin-left:24px;">
+    <a class="navbar-brand fw-bold d-flex align-items-center" href="alestateams.com" style="margin-left:24px;">
       <img src="alestalogo.png" alt="Alesta Logo" width="32" height="28" style="margin-right:8px;">
       <span style="color:#ffffff;">ALESTA TEAMS</span>
     </a>
@@ -143,6 +143,9 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div id="nav" class="collapse navbar-collapse">
+      
+
+
       <ul class="navbar-nav ms-auto" style="margin-right:16px;">
         <li class="nav-item"><a class="nav-link" href="#coy">ÇÖY</a></li>
         <li class="nav-item"><a class="nav-link" href="#fırtına">FIRTINA</a></li>
@@ -181,13 +184,10 @@
         <div class="card-glass p-4">
           <h5 class="fw-bold mb-3 text-primary"><i class="fa-solid fa-microchip me-2"></i><span data-i18n="details-title">Detaylar</span></h5>
           <ul class="text-secondary mb-0" style="line-height: 1.8;">
-            <li data-i18n="coy-li1">🏭 <strong>Üretim ve Tasarım:</strong> Aracımızın mekanik tasarımı alüminyum gövde-kapak, pleksi panel ve motor tutuculardan oluşmaktadır.</li>
-            <li data-i18n="coy-li1-sub1">⚙️ Aracımız YEPAR makinede alüminyum döküm yöntemiyle üretilmiştir.</li> 
-            <li data-i18n="coy-li1-sub2">🛡️ ADOVA Eloksal şirketinde eloksal kaplama yapılmıştır.</li>
-            <li data-i18n="coy-li1-sub3">🔁 Hem tam otonom (AUV) hem de uzaktan kontrollü (ROV) olarak çalışabilen çok yönlü ve seri üretime tam uygun yapıdadır.</li> 
+            <li data-i18n="coy-li1">🏭 <strong>Üretim ve Tasarım:</strong> 2025 yılında Adana Metal Sanayi'de kalıbı oluşturularak alüminyum döküm yöntemiyle üretilmiştir. Bu sayede seri üretime tam uygun bir yapıdadır.</li>
             <li data-i18n="coy-li2">🦆 <strong>İsim Hikayesi:</strong> Dökümden ilk çıktığındaki kaba halinin; polishing, eloksal kaplama ve boyama işlemlerinden sonra estetik bir görünüme kavuşması nedeniyle "Çirkin Ördek Yavrusu" hikayesine benzetilmiş ve aracımız "ÇÖY" adını almıştır.</li>
-            <li data-i18n="coy-li3">🌊 <strong>Dayanıklılık:</strong> Yapılan analizlere göre 200 metre derinliğe kadar tam sızdırmazlık sağlayabilen kompakt bir araçtır.</li>
-            <li data-i18n="coy-li4">🏆 <strong>Yarışmalar:</strong> Teknofest 2025 İleri Kategori Finalistliği, SAF 2025 Çifte İkincilik ve "Best Engineering Solution" Mansiyon Ödülü.</li>
+            <li data-i18n="coy-li3">🌊 <strong>Dayanıklılık:</strong> Yapılan mühendislik analizlerine göre 300 metre derinliğe kadar tam sızdırmazlık sağlamaktadır.</li>
+            <li data-i18n="coy-li4">🏆 <strong>Kullanım:</strong> Teknofest 2025 İleri Kategori ve SAF 2025 yarışmalarında boy göstermiştir. Hem tam otonom (AUV) hem de uzaktan kontrollü (ROV) olarak çalışabilen çok yönlü bir sistemdir.</li>
           </ul>
         </div>
         <div class="mt-4">
@@ -252,12 +252,11 @@
         <div class="card-glass p-4">
           <h5 class="fw-bold mb-3 text-primary"><i class="fa-solid fa-microchip me-2"></i><span data-i18n="details-title">Detaylar</span></h5>
           <ul class="text-secondary mb-0" style="line-height: 1.8;">
-            <li data-i18n="firtina-li1">⚙️ <strong>Tasarım Detayları:</strong> Sızdırmazlığı sağlayabilmek için pleksi tüpler gövdeye sıkıgeçme yöntemiyle takılmıştır ve arada 2 kat conta bulundurularak sızdırmazlıktan tam emin olunmuştur.</li>
-            <li data-i18n="firtina-li1-sub1">🏭 Ana gövde görevi gören alüminyum şasenin CNC kesim işlemi Bacaksızlar firmasında gerçekleştirilmiştir.</li>
-            <li data-i18n="firtina-li1-sub2">🔩 Alüminyum şase, merkezinde penetratör girişleri bulunan ve iki pleksi tüpü birbirine bağlayan bir ana gövde görevi görür.</li>
-            <li data-i18n="firtina-li1-sub3">🚀 Aracımızın 6 eksende hareketini sağlayabilmek için 7 adet itici motor kullanılmıştır.</li>
-            <li data-i18n="firtina-li2">🔁 <strong>Dayanıklılık ve Kullanım:</strong> Hem tam otonom (AUV) hem de uzaktan kontrollü (ROV) olarak kullanılabilmektedir.</li>
-            <li data-i18n="firtina-li3">🏆 <strong>Yarışmalar:</strong> Teknofest 2022 & 2023 Temel Kategori İkinciliği, 1 Idea 1 World Altın Madalya, SAF 2023 Birinciliği, SAUVC 2024 Dördüncülüğü ve "En Hızlı AUV Ödülü".</li>
+            <li data-i18n="firtina-li1">🏆 <strong>Yarışmalar:</strong> 2024 Teknofest İleri Kategori, 1 Idea 1 World, SAUVC 25 ve 2025 Teknofest Temel Kategori yarışmalarında başarıyla görev almıştır.</li>
+            <li data-i18n="firtina-li2">🔁 <strong>Kullanım Modu:</strong> Hem tam otonom (AUV) hem de uzaktan kontrollü (ROV) olarak kullanılabilmektedir.</li>
+            <li data-i18n="firtina-li3">🔩 <strong>Gövde Yapısı:</strong> Merkezinde penetratör girişlerinin bulunduğu alüminyum CNC üretim bir ana gövde yer alır. Bu parça, iki pleksiglass tüpü birbirine bağlayan temel iskeleti oluşturur.</li>
+            <li data-i18n="firtina-li4">💧 <strong>Sızdırmazlık ve Montaj:</strong> Pleksiglass tüpler CNC gövdeye sıkıgeçme yöntemiyle takılır ve arada 2 kat O-ring conta bulunur. Kolay sökülüp takılabilen bu mekanizma araca yüksek modülerlik katar. (Yarışmalarda 7 ve 8 motorlu dizilimlerle kullanılmıştır).</li>
+            <li data-i18n="firtina-li5">⚙️ <strong>Tasarım Detayları:</strong> Arka kısımda CNC kesim alüminyum kapak, ön tarafta ise pleksiglass bir kubbe ve bu kubbeyi tüpe bağlayan alüminyum CNC flanş bulunur. Sızdırmazlık tüm bu bağlantı noktalarında çift kat O-ring ile güvence altına alınmıştır.</li>
           </ul>
         </div>
         <div class="mt-4">
@@ -280,11 +279,9 @@
         <div class="card-glass p-4">
           <h5 class="fw-bold mb-3 text-primary"><i class="fa-solid fa-microchip me-2"></i><span data-i18n="details-title">Detaylar</span></h5>
           <ul class="text-secondary mb-0" style="line-height: 1.8;">
-            <li data-i18n="biskuvi-li1">⚙️ <strong>Tasarım:</strong> Mekanik tasarımında bütün iç ve dış bileşenler üzerinde sabitli olan bir kapak kullanılmıştır. Bu kapak alüminyum gövde ile kaplanmış ve gövdenin ön/alt kısmına kamerayla havuzun taranabilmesi için pleksi boşluğu açılmıştır.</li>
-            <li data-i18n="biskuvi-li1-sub1">🏭 Alüminyum gövdenin CNC kesim işlemi Bacaksızlar firmasında gerçekleştirilmiştir.</li>
-            <li data-i18n="biskuvi-li1-sub2">🔩 Alüminyum gövdenin sağladığı alan, elektronik sisteme kolay erişim sağlamıştır.</li>
-            <li data-i18n="biskuvi-li2">🔁 <strong>Dayanıklılık ve Kullanım:</strong> Hem tam otonom (AUV) hem de uzaktan kontrollü (ROV) olarak kullanılabilmektedir.</li>
-            <li data-i18n="biskuvi-li3">🏆 <strong>Yarışmalar:</strong> Teknofest 2024 Temel Kategori Dördüncülüğü.</li>
+            <li data-i18n="biskuvi-li1">🏁 Teknofest ve 1 Idea 1 World yarışmalarında kullanılmıştır.</li>
+            <li data-i18n="biskuvi-li2">🔩 Alüminyum CNC ile üretilmiştir.</li>
+            <li data-i18n="biskuvi-li3">🔧 Geniş ve rahat iç hazne, elektronik için ideal çalışma alanı sunar.</li>
           </ul>
         </div>
         <div class="mt-4">
@@ -300,10 +297,7 @@
               <img src="BİSKÜVİfoto.jpeg" class="d-block w-100 vehicle-img-slide" alt="BİSKÜVİ Aracı 1">
             </div>
             <div class="carousel-item">
-              <img src="biskuvi2.jpeg" class="d-block w-100 vehicle-img-slide" alt="BİSKÜVİ Aracı 2">
-            </div>
-            <div class="carousel-item">
-              <img src="biskuvi3.jpeg" class="d-block w-100 vehicle-img-slide" alt="BİSKÜVİ Aracı 3">
+              <img src="BİSKÜVİfoto2.jpeg" class="d-block w-100 vehicle-img-slide" alt="BİSKÜVİ Aracı 2">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselBiskuvi" data-bs-slide="prev">
@@ -328,7 +322,7 @@
               <img src="GÖMEÇfoto.jpeg" class="d-block w-100 vehicle-img-slide" alt="GÜMEÇ Aracı 1">
             </div>
             <div class="carousel-item">
-              <img src="GÖMEÇfoto.jpeg" class="d-block w-100 vehicle-img-slide" alt="GÜMEÇ Aracı 2">
+              <img src="GÖMEÇfoto2.jpeg" class="d-block w-100 vehicle-img-slide" alt="GÜMEÇ Aracı 2">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselGumec" data-bs-slide="prev">
@@ -346,12 +340,10 @@
         <div class="card-glass p-4">
           <h5 class="fw-bold mb-3 text-primary"><i class="fa-solid fa-microchip me-2"></i><span data-i18n="details-title">Detaylar</span></h5>
           <ul class="text-secondary mb-0" style="line-height: 1.8;">
-            <li data-i18n="gumec-li1">⚙️ <strong>Tasarım:</strong> Aracımızın mekanik tasarımı iki alüminyum kapak ve pleksi gövdeden oluşmaktadır. Yenilikçi ve dengeli tasarımı dikkat çeker.</li>
-            <li data-i18n="gumec-li1-sub1">🏭 Alüminyum kapakların CNC kesim işlemi Bacaksızlar firmasında gerçekleştirilmiştir.</li>
-            <li data-i18n="gumec-li1-sub2">🚀 Aracımızın 6 eksende hareketini sağlayabilmek için 8 adet itici motor kullanılmıştır.</li> 
-            <li data-i18n="gumec-li1-sub3">🔁 Hem tam otonom (AUV) hem de uzaktan kontrollü (ROV) olarak çalışabilen çok yönlü bir araçtır.</li>
-            <li data-i18n="gumec-li2">🌊 <strong>Dayanıklılık:</strong> Sızdırmazlığı sağlayabilmek için alüminyum kapaklar gövdeye sıkıgeçme yöntemiyle takılmıştır ve arada 2 kat conta bulundurularak sızdırmazlıktan tam emin olunmuştur. Su stabilizasyonu en iyi olan araçlardan biridir.</li> 
-            <li data-i18n="gumec-li3">🏆 <strong>Yarışmalar:</strong> Teknofest 2022 & 2023 Temel Kategori İkinciliği, 1 Idea 1 World Altın Madalya, SAF 2023 Birinciliği, SAUVC 2024 Dördüncülüğü ve "En Hızlı AUV Ödülü".</li>
+            <li data-i18n="gumec-li1">🏆 2 kez Teknofest, 2023 SAF ve 2024 SAUVC yarışmalarında yer almıştır.</li>
+            <li data-i18n="gumec-li2">⚡ SAUVC’da “Dünyanın En Hızlı AUV” ödülünü kazanmıştır.</li>
+            <li data-i18n="gumec-li3">⚓ Su stabilizasyonu en iyi olan araçlardan biridir.</li>
+            <li data-i18n="gumec-li4">💡 Yenilikçi ve dengeli tasarımıyla dikkat çeker.</li>
           </ul>
         </div>
         <div class="mt-4">
@@ -374,10 +366,12 @@
         <div class="card-glass p-4">
           <h5 class="fw-bold mb-3 text-primary"><i class="fa-solid fa-microchip me-2"></i><span data-i18n="details-title">Detaylar</span></h5>
           <ul class="text-secondary mb-0" style="line-height: 1.8;">
-            <li data-i18n="alesta2-li1">🔩 <strong>Tasarım:</strong> Aracın ana gövdesi pleksiglass tüpten oluşmaktadır. Dış kabuğu ise sigma profilden yapılmıştır.</li>
-            <li data-i18n="alesta2-li2">🚀 <strong>Hareket Sistemi:</strong> 4 adet itici motora sahip uzaktan kontrol edilen bir araçtır. Motorlara bağlı olan sistem sayesinde eksenler hızlıca değiştirilebilir.</li>
-            <li data-i18n="alesta2-li3">📈 <strong>Gelişim:</strong> Gelişim süreci için takımın attığı en önemli adımlardan biridir.</li>
-          </ul>
+            <li data-i18n="alesta2-li1">⚙️ 4 motora sahip gelişmiş bir araçtır.</li>
+            <li data-i18n="alesta2-li2">🛠️ Motorlara bağlı sistem sayesinde eksenler hızlıca değiştirilebilir.</li>
+            <li data-i18n="alesta2-li3">🔁 Deneysel tasarım, motor performansı ve denge optimizasyonu odaklıdır.</li>
+            <li data-i18n="alesta2-li4">📊 Sürekli geliştirme süreci ile takımın önemli bir adımıdır.</li>
+            <li data-i18n="alesta1-li3">🔁 2021 Teknofest Finalistliği.</li>
+        </ul>
         </div>
         <div class="mt-4">
           <a href="https://alestateams.com/#vehicles" class="btn btn-neon">
@@ -438,10 +432,11 @@
         <div class="card-glass p-4">
           <h5 class="fw-bold mb-3 text-primary"><i class="fa-solid fa-microchip me-2"></i><span data-i18n="details-title">Detaylar</span></h5>
           <ul class="text-secondary mb-0" style="line-height: 1.8;">
-            <li data-i18n="alesta1-li1">🔩 <strong>Tasarım:</strong> Ana malzemesi su borusu olan aracımız, yat macunu ile kaplanmış ve üzerine epoksi kaplama yapılmıştır.</li>
-            <li data-i18n="alesta1-li2">🚀 <strong>Hareket Sistemi:</strong> Aracın itici motorları, servo motorlar yardımı ile dönebilmektedir.</li>
-            <li data-i18n="alesta1-li3">🏁 <strong>Tarihçe:</strong> Takımın ilk su altı araçlarındandır. Basit ve etkileyici yapısıyla takımın ilk deneyimlerini kazanmasında büyük rol oynamıştır.</li>
-          </ul>
+            <li data-i18n="alesta1-li1">🏁 Takımın ilk su altı araçlarından biridir.</li>
+            <li data-i18n="alesta1-li2">⚙️ Basit ve etkili tasarımı ile başlangıç aşamasında önemli görevler üstlenmiştir.</li>
+            <li data-i18n="alesta1-li3">🔁 Temel AUV/ROV konseptlerinin öğrenilmesinde önemli rol oynamıştır.</li>
+            <li data-i18n="alesta1-li3">🔁 2020 Teknofest Finalistliği.</li>
+        </ul>
         </div>
         <div class="mt-4">
           <a href="https://alestateams.com/#vehicles" class="btn btn-neon">
@@ -480,6 +475,7 @@
   }
 
   const translations = {
+    'nav-home': { tr: 'Ana Sayfa', en: 'Home' },
     'hero-title': { tr: 'Araçlarımız', en: 'Our Vehicles' },
     'hero-slogan': { tr: 'ALESTA TEAMS', en: 'ALESTA TEAMS' },
     'btn-back': { tr: 'Ana Sayfaya Dön', en: 'Return to Main Page' },
@@ -487,51 +483,44 @@
 
     // ÇÖY
     'coy-desc': { tr: '<strong>Üretim:</strong> 2025 | <strong>Kullanım:</strong> Günümüzde Aktif', en: '<strong>Production:</strong> 2025 | <strong>Status:</strong> Currently Active' },
-    'coy-li1': { tr: '🏭 <strong>Üretim ve Tasarım:</strong> Aracımızın mekanik tasarımı alüminyum gövde-kapak, pleksi panel ve motor tutuculardan oluşmaktadır.', en: '🏭 <strong>Production & Design:</strong> Our vehicle\'s mechanical design consists of an aluminum body-cover, plexi panel, and motor holders.' },
-    'coy-li1-sub1': { tr: '⚙️ Aracımız YEPAR makinede alüminyum döküm yöntemiyle üretilmiştir.', en: '⚙️ Our vehicle was produced using aluminum casting method at YEPAR machine.' },
-    'coy-li1-sub2': { tr: '🛡️ ADOVA Eloksal şirketinde eloksal kaplama yapılmıştır.', en: '🛡️ Anodizing was done at ADOVA Anodizing company.' },
-    'coy-li1-sub3': { tr: '🔁 Hem tam otonom (AUV) hem de uzaktan kontrollü (ROV) olarak çalışabilen çok yönlü ve seri üretime tam uygun yapıdadır.', en: '🔁 It is a versatile structure fully suitable for mass production, capable of operating both fully autonomous (AUV) and remotely controlled (ROV).' },
+    'coy-li1': { tr: '🏭 <strong>Üretim ve Tasarım:</strong> 2025 yılında Adana Metal Sanayi\'de kalıbı oluşturularak alüminyum döküm yöntemiyle üretilmiştir. Bu sayede seri üretime tam uygun bir yapıdadır.', en: '🏭 <strong>Production & Design:</strong> Molded and produced via aluminum casting at Adana Metal Sanayi in 2025, making it perfectly suitable for mass production.' },
     'coy-li2': { tr: '🦆 <strong>İsim Hikayesi:</strong> Dökümden ilk çıktığındaki kaba halinin; polishing, eloksal kaplama ve boyama işlemlerinden sonra estetik bir görünüme kavuşması nedeniyle "Çirkin Ördek Yavrusu" hikayesine benzetilmiş ve aracımız "ÇÖY" adını almıştır.', en: '🦆 <strong>Naming Story:</strong> Named "ÇÖY" (Ugly Duckling) because its rough post-casting appearance transformed into a highly aesthetic design after polishing, anodizing, and painting.' },
-    'coy-li3': { tr: '🌊 <strong>Dayanıklılık:</strong> Yapılan analizlere göre 200 metre derinliğe kadar tam sızdırmazlık sağlayabilen kompakt bir araçtır.', en: '🌊 <strong>Durability:</strong> According to analyses, it is a compact vehicle that provides full waterproofing up to a depth of 200 meters.' },
-    'coy-li4': { tr: '🏆 <strong>Yarışmalar:</strong> Teknofest 2025 İleri Kategori Finalistliği, SAF 2025 Çifte İkincilik ve "Best Engineering Solution" Mansiyon Ödülü.', en: '🏆 <strong>Competitions:</strong> Teknofest 2025 Advanced Category Finalist, SAF 2025 Double Runner-Up, and "Best Engineering Solution" Honorable Mention.' },
+    'coy-li3': { tr: '🌊 <strong>Dayanıklılık:</strong> Yapılan mühendislik analizlerine göre 300 metre derinliğe kadar tam sızdırmazlık sağlamaktadır.', en: '🌊 <strong>Durability:</strong> According to engineering analyses, it provides full waterproofing up to a depth of 300 meters.' },
+    'coy-li4': { tr: '🏆 <strong>Kullanım:</strong> Teknofest 2025 İleri Kategori ve SAF 2025 yarışmalarında boy göstermiştir. Hem tam otonom (AUV) hem de uzaktan kontrollü (ROV) olarak çalışabilen çok yönlü bir sistemdir.', en: '🏆 <strong>Usage:</strong> Competed in Teknofest 2025 Advanced Category and SAF 2025. It is a versatile system that can operate as both fully autonomous (AUV) and remotely operated (ROV).' },
 
     // FIRTINA
     'firtina-desc': { tr: '<strong>Üretim:</strong> 2024 | <strong>Kullanım:</strong> 2024 - 2025', en: '<strong>Production:</strong> 2024 | <strong>Usage:</strong> 2024 - 2025' },
-    'firtina-li1': { tr: '⚙️ <strong>Tasarım Detayları:</strong> Sızdırmazlığı sağlayabilmek için pleksi tüpler gövdeye sıkıgeçme yöntemiyle takılmıştır ve arada 2 kat conta bulundurularak sızdırmazlıktan tam emin olunmuştur.', en: '⚙️ <strong>Design Details:</strong> To ensure waterproofing, plexi tubes are press-fitted to the body with double O-rings.' },
-    'firtina-li1-sub1': { tr: '🏭 Ana gövde görevi gören alüminyum şasenin CNC kesim işlemi Bacaksızlar firmasında gerçekleştirilmiştir.', en: '🏭 The CNC cutting of the aluminum chassis serving as the main body was carried out by the Bacaksızlar company.' },
-    'firtina-li1-sub2': { tr: '🔩 Alüminyum şase, merkezinde penetratör girişleri bulunan ve iki pleksi tüpü birbirine bağlayan bir ana gövde görevi görür.', en: '🔩 The aluminum chassis acts as a main body with penetrator inputs at its center, connecting two plexi tubes.' },
-    'firtina-li1-sub3': { tr: '🚀 Aracımızın 6 eksende hareketini sağlayabilmek için 7 adet itici motor kullanılmıştır.', en: '🚀 7 thruster motors were used to provide our vehicle with movement in 6 axes.' },
-    'firtina-li2': { tr: '🔁 <strong>Dayanıklılık ve Kullanım:</strong> Hem tam otonom (AUV) hem de uzaktan kontrollü (ROV) olarak kullanılabilmektedir.', en: '🔁 <strong>Durability & Usage:</strong> Can be used as both fully autonomous (AUV) and remotely operated (ROV).' },
-    'firtina-li3': { tr: '🏆 <strong>Yarışmalar:</strong> Teknofest 2022 & 2023 Temel Kategori İkinciliği, 1 Idea 1 World Altın Madalya, SAF 2023 Birinciliği, SAUVC 2024 Dördüncülüğü ve "En Hızlı AUV Ödülü".', en: '🏆 <strong>Competitions:</strong> Teknofest 2022 & 2023 Basic Category 2nd Place, 1 Idea 1 World Gold Medal, SAF 2023 1st Place, SAUVC 2024 4th Place, and "Fastest AUV Award".' },
+    'firtina-li1': { tr: '🏆 <strong>Yarışmalar:</strong> 2024 Teknofest İleri Kategori, 1 Idea 1 World, SAUVC 25 ve 2025 Teknofest Temel Kategori yarışmalarında başarıyla görev almıştır.', en: '🏆 <strong>Competitions:</strong> Successfully competed in 2024 Teknofest Advanced Category, 1 Idea 1 World, SAUVC 25, and 2025 Teknofest Basic Category.' },
+    'firtina-li2': { tr: '🔁 <strong>Kullanım Modu:</strong> Hem tam otonom (AUV) hem de uzaktan kontrollü (ROV) olarak kullanılabilmektedir.', en: '🔁 <strong>Usage Mode:</strong> Can be utilized as both fully autonomous (AUV) and remotely operated (ROV).' },
+    'firtina-li3': { tr: '🔩 <strong>Gövde Yapısı:</strong> Merkezinde penetratör girişlerinin bulunduğu alüminyum CNC üretim bir ana gövde yer alır. Bu parça, iki pleksiglass tüpü birbirine bağlayan temel iskeleti oluşturur.', en: '🔩 <strong>Body Structure:</strong> Features an aluminum CNC main body with penetrator inputs at its center, acting as the main skeleton connecting two plexiglass tubes.' },
+    'firtina-li4': { tr: '💧 <strong>Sızdırmazlık ve Montaj:</strong> Pleksiglass tüpler CNC gövdeye sıkıgeçme yöntemiyle takılır ve arada 2 kat O-ring conta bulunur. Kolay sökülüp takılabilen bu mekanizma araca yüksek modülerlik katar. (Yarışmalarda 7 ve 8 motorlu dizilimlerle kullanılmıştır).', en: '💧 <strong>Waterproofing & Assembly:</strong> Plexiglass tubes are press-fitted to the CNC body with double O-ring seals. This easily assembled mechanism adds high modularity. (Used with 7 and 8 thruster configurations in competitions).' },
+    'firtina-li5': { tr: '⚙️ <strong>Tasarım Detayları:</strong> Arka kısımda CNC kesim alüminyum kapak, ön tarafta ise pleksiglass bir kubbe ve bu kubbeyi tüpe bağlayan alüminyum CNC flanş bulunur. Sızdırmazlık tüm bu bağlantı noktalarında çift kat O-ring ile güvence altına alınmıştır.', en: '⚙️ <strong>Design Details:</strong> Includes a CNC-cut aluminum rear cap and a front plexiglass dome connected to the tube via an aluminum CNC flange. Waterproofing is secured with double O-rings at all these connection points.' },
 
     // BİSKÜVİ
     'biskuvi-desc': { tr: '<strong>Üretim:</strong> 2023 | <strong>Kullanım:</strong> 2023 - 2024', en: '<strong>Production:</strong> 2023 | <strong>Usage:</strong> 2023 - 2024' },
-    'biskuvi-li1': { tr: '⚙️ <strong>Tasarım:</strong> Mekanik tasarımında bütün iç ve dış bileşenler üzerinde sabitli olan bir kapak kullanılmıştır. Bu kapak alüminyum gövde ile kaplanmış ve gövdenin ön/alt kısmına kamerayla havuzun taranabilmesi için pleksi boşluğu açılmıştır.', en: '⚙️ <strong>Design:</strong> A cover fixed on all inner and outer components was used in its mechanical design. This cover is clad with an aluminum body, and a plexi gap was opened for the camera to scan the pool.' },
-    'biskuvi-li1-sub1': { tr: '🏭 Alüminyum gövdenin CNC kesim işlemi Bacaksızlar firmasında gerçekleştirilmiştir.', en: '🏭 The CNC cutting of the aluminum body was carried out by the Bacaksızlar company.' },
-    'biskuvi-li1-sub2': { tr: '🔩 Alüminyum gövdenin sağladığı alan, elektronik sisteme kolay erişim sağlamıştır.', en: '🔩 The space provided by the aluminum body allowed easy access to the electronic system.' },
-    'biskuvi-li2': { tr: '🔁 <strong>Dayanıklılık ve Kullanım:</strong> Hem tam otonom (AUV) hem de uzaktan kontrollü (ROV) olarak kullanılabilmektedir.', en: '🔁 <strong>Durability & Usage:</strong> Can be used as both fully autonomous (AUV) and remotely operated (ROV).' },
-    'biskuvi-li3': { tr: '🏆 <strong>Yarışmalar:</strong> Teknofest 2024 Temel Kategori Dördüncülüğü.', en: '🏆 <strong>Competitions:</strong> Teknofest 2024 Basic Category 4th Place.' },
+    'biskuvi-li1': { tr: '🏁 Teknofest ve 1 Idea 1 World yarışmalarında kullanılmıştır.', en: '🏁 Used in Teknofest and 1 Idea 1 World competitions.' },
+    'biskuvi-li2': { tr: '🔩 Alüminyum CNC ile üretilmiştir.', en: '🔩 Manufactured using Aluminum CNC.' },
+    'biskuvi-li3': { tr: '🔧 Geniş ve rahat iç hazne, elektronik için ideal çalışma alanı sunar.', en: '🔧 Wide and spacious internal chamber offers an ideal workspace for electronics.' },
 
     // GÜMEÇ
     'gumec-desc': { tr: '<strong>Üretim:</strong> 2021 | <strong>Kullanım:</strong> 2022 - 2024', en: '<strong>Production:</strong> 2021 | <strong>Usage:</strong> 2022 - 2024' },
-    'gumec-li1': { tr: '⚙️ <strong>Tasarım:</strong> Aracımızın mekanik tasarımı iki alüminyum kapak ve pleksi gövdeden oluşmaktadır. Yenilikçi ve dengeli tasarımı dikkat çeker.', en: '⚙️ <strong>Design:</strong> The mechanical design of our vehicle consists of two aluminum covers and a plexi body. Its innovative and balanced design stands out.' },
-    'gumec-li1-sub1': { tr: '🏭 Alüminyum kapakların CNC kesim işlemi Bacaksızlar firmasında gerçekleştirilmiştir.', en: '🏭 The CNC cutting of the aluminum covers was carried out by the Bacaksızlar company.' },
-    'gumec-li1-sub2': { tr: '🚀 Aracımızın 6 eksende hareketini sağlayabilmek için 8 adet itici motor kullanılmıştır.', en: '🚀 8 thruster motors were used to provide movement in 6 axes.' },
-    'gumec-li1-sub3': { tr: '🔁 Hem tam otonom (AUV) hem de uzaktan kontrollü (ROV) olarak çalışabilen çok yönlü bir araçtır.', en: '🔁 It is a versatile vehicle capable of operating both fully autonomous (AUV) and remotely controlled (ROV).' },
-    'gumec-li2': { tr: '🌊 <strong>Dayanıklılık:</strong> Sızdırmazlığı sağlayabilmek için alüminyum kapaklar gövdeye sıkıgeçme yöntemiyle takılmıştır ve arada 2 kat conta bulundurularak sızdırmazlıktan tam emin olunmuştur. Su stabilizasyonu en iyi olan araçlardan biridir.', en: '🌊 <strong>Durability:</strong> For waterproofing, aluminum covers are press-fitted to the body with double O-rings. It is one of the vehicles with the best water stabilization.' },
-    'gumec-li3': { tr: '🏆 <strong>Yarışmalar:</strong> Teknofest 2022 & 2023 Temel Kategori İkinciliği, 1 Idea 1 World Altın Madalya, SAF 2023 Birinciliği, SAUVC 2024 Dördüncülüğü ve "En Hızlı AUV Ödülü".', en: '🏆 <strong>Competitions:</strong> Teknofest 2022 & 2023 Basic Category 2nd Place, 1 Idea 1 World Gold Medal, SAF 2023 1st Place, SAUVC 2024 4th Place, and "Fastest AUV Award".' },
+    'gumec-li1': { tr: '🏆 2 kez Teknofest, 2023 SAF ve 2024 SAUVC yarışmalarında yer almıştır.', en: '🏆 Participated in Teknofest twice, SAF 2023, and SAUVC 2024.' },
+    'gumec-li2': { tr: '⚡ SAUVC’da “Dünyanın En Hızlı AUV” ödülünü kazanmıştır.', en: '⚡ Won the "World\'s Fastest AUV" award at SAUVC.' },
+    'gumec-li3': { tr: '⚓ Su stabilizasyonu en iyi olan araçlardan biridir.', en: '⚓ One of the vehicles with the best water stabilization.' },
+    'gumec-li4': { tr: '💡 Yenilikçi ve dengeli tasarımıyla dikkat çeker.', en: '💡 Stands out with its innovative and balanced design.' },
 
     // ALESTAROV 2
     'alesta2-desc': { tr: '<strong>Üretim:</strong> 2020 | <strong>Kullanım:</strong> 2020 - 2021', en: '<strong>Production:</strong> 2020 | <strong>Usage:</strong> 2020 - 2021' },
-    'alesta2-li1': { tr: '🔩 <strong>Tasarım:</strong> Aracın ana gövdesi pleksiglass tüpten oluşmaktadır. Dış kabuğu ise sigma profilden yapılmıştır.', en: '🔩 <strong>Design:</strong> The main body of the vehicle consists of a plexiglass tube. Its outer shell is made of a sigma profile.' },
-    'alesta2-li2': { tr: '🚀 <strong>Hareket Sistemi:</strong> 4 adet itici motora sahip uzaktan kontrol edilen bir araçtır. Motorlara bağlı olan sistem sayesinde eksenler hızlıca değiştirilebilir.', en: '🚀 <strong>Movement System:</strong> A remotely controlled vehicle with 4 thruster motors. Axes can be quickly changed thanks to the system connected to the motors.' },
-    'alesta2-li3': { tr: '📈 <strong>Gelişim:</strong> Gelişim süreci için takımın attığı en önemli adımlardan biridir.', en: '📈 <strong>Development:</strong> One of the most important steps taken by the team for the development process.' },
+    'alesta2-li1': { tr: '⚙️ 4 motora sahip gelişmiş bir araçtır.', en: '⚙️ An advanced vehicle with 4 thrusters.' },
+    'alesta2-li2': { tr: '🛠️ Motorlara bağlı sistem sayesinde eksenler hızlıca değiştirilebilir.', en: '🛠️ Axes can be quickly changed thanks to the system connected to the motors.' },
+    'alesta2-li3': { tr: '🔁 Deneysel tasarım, motor performansı ve denge optimizasyonu odaklıdır.', en: '🔁 Experimental design focused on motor performance and balance optimization.' },
+    'alesta2-li4': { tr: '📊 Sürekli geliştirme süreci ile takımın önemli bir adımıdır.', en: '📊 A significant step for the team with its continuous development process.' },
 
     // ALESTAROV
     'alesta1-desc': { tr: '<strong>Üretim:</strong> 2019 | <strong>Kullanım:</strong> 2019 - 2020', en: '<strong>Production:</strong> 2019 | <strong>Usage:</strong> 2019 - 2020' },
-    'alesta1-li1': { tr: '🔩 <strong>Tasarım:</strong> Ana malzemesi su borusu olan aracımız, yat macunu ile kaplanmış ve üzerine epoksi kaplama yapılmıştır.', en: '🔩 <strong>Design:</strong> Our vehicle, whose main material is a water pipe, is covered with yacht putty and epoxy coating on top.' },
-    'alesta1-li2': { tr: '🚀 <strong>Hareket Sistemi:</strong> Aracın itici motorları, servo motorlar yardımı ile dönebilmektedir.', en: '🚀 <strong>Movement System:</strong> The vehicle\'s thruster motors can rotate with the help of servo motors.' },
-    'alesta1-li3': { tr: '🏁 <strong>Tarihçe:</strong> Takımın ilk su altı araçlarındandır. Basit ve etkileyici yapısıyla takımın ilk deneyimlerini kazanmasında büyük rol oynamıştır.', en: '🏁 <strong>History:</strong> One of the team\'s first underwater vehicles. It played a major role in gaining the team\'s first experiences with its simple and impressive structure.' }
+    'alesta1-li1': { tr: '🏁 Takımın ilk su altı araçlarından biridir.', en: '🏁 One of the team\'s first underwater vehicles.' },
+    'alesta1-li2': { tr: '⚙️ Basit ve etkili tasarımı ile başlangıç aşamasında önemli görevler üstlenmiştir.', en: '⚙️ Undertook important tasks in the initial phase with its simple and effective design.' },
+    'alesta1-li3': { tr: '🔁 Temel AUV/ROV konseptlerinin öğrenilmesinde önemli rol oynamıştır.', en: '🔁 Played an important role in learning basic AUV/ROV concepts.' }
   };
 
   // --- Diğer Scriptler ---
