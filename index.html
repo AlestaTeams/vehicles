@@ -23,7 +23,6 @@
       --accent:#007bff; 
       --accent-2:#ff3864;
       --shadow-neon:0 0 24px rgba(0,123,255,0.25);
-      /* Yeni Lacivert Neon Rengi */
       --neon-navy: #000080; 
     }
     html,body{background:radial-gradient(1200px 800px at 10% 10%, #0d141b 0%, var(--bg-0) 35%), linear-gradient(180deg, var(--bg-0), var(--bg-1)); color:var(--text-0); font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; scroll-behavior: smooth;}
@@ -73,10 +72,9 @@
     .btn-neon{border:1px solid var(--accent); color:var(--text-0); box-shadow:var(--shadow-neon); transition:transform .2s ease, box-shadow .2s ease; background:linear-gradient(180deg, rgba(0,123,255,0.08), rgba(0,123,255,0.02));}
     .btn-neon:hover{transform:translateY(-2px); box-shadow:0 0 32px rgba(0,123,255,0.45); background-color:#0056b3; border-color:#0056b3; color: white;}
     
-    /* --- ARAÇ SLIDER GÖRSELLERİ --- */
+    /* --- ARAÇ SLIDER GÖRSELLERİ (Yan Yana Uyumlu Boyut) --- */
     .vehicle-carousel {
-      width: 100% !important;
-      display: block !important;
+      width: 100%;
       border-radius: 16px;
       border: 2px solid rgba(255,255,255,0.1);
       box-shadow: 0 10px 30px rgba(0,0,0,0.5);
@@ -90,16 +88,9 @@
       border-color: rgba(0,123,255,0.3); 
     }
 
-    .vehicle-carousel .carousel-inner,
-    .vehicle-carousel .carousel-item {
-      width: 100% !important;
-      height: 100% !important;
-    }
-
     .vehicle-img-slide {
-      width: 100% !important;
-      height: auto !important; 
-      display: block !important;
+      width: 100%;
+      aspect-ratio: 4/3; /* Fotoğrafların yan yana dururken şık görünmesini sağlar */
       object-fit: cover;
     }
     
@@ -193,7 +184,7 @@
           <i class="fa-solid fa-arrow-left me-2"></i> <span data-i18n="btn-back">Ana Sayfaya Dön</span>
         </a>
       </div>
-      <div class="col-lg-6 order-1 order-lg-2 scroll-reveal reveal-right text-center w-100">
+      <div class="col-lg-6 order-1 order-lg-2 scroll-reveal reveal-right text-center">
         <div id="carouselCoy" class="carousel slide vehicle-carousel" data-bs-ride="carousel" data-bs-interval="3000">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -223,7 +214,7 @@
 <section id="fırtına" class="section" style="background: rgba(255,255,255,0.02);">
   <div class="container">
     <div class="row align-items-center g-5">
-      <div class="col-lg-6 scroll-reveal reveal-left text-center w-100">
+      <div class="col-lg-6 scroll-reveal reveal-left text-center">
         <div id="carouselFirtina" class="carousel slide vehicle-carousel" data-bs-ride="carousel" data-bs-interval="3000">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -285,7 +276,7 @@
           <i class="fa-solid fa-arrow-left me-2"></i> <span data-i18n="btn-back">Ana Sayfaya Dön</span>
         </a>
       </div>
-      <div class="col-lg-6 order-1 order-lg-2 scroll-reveal reveal-right text-center w-100">
+      <div class="col-lg-6 order-1 order-lg-2 scroll-reveal reveal-right text-center">
         <div id="carouselBiskuvi" class="carousel slide vehicle-carousel" data-bs-ride="carousel" data-bs-interval="3000">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -310,7 +301,7 @@
 <section id="gumeç" class="section" style="background: rgba(255,255,255,0.02);">
   <div class="container">
     <div class="row align-items-center g-5">
-      <div class="col-lg-6 scroll-reveal reveal-left text-center w-100">
+      <div class="col-lg-6 scroll-reveal reveal-left text-center">
         <div id="carouselGumec" class="carousel slide vehicle-carousel" data-bs-ride="carousel" data-bs-interval="3000">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -369,7 +360,7 @@
           <i class="fa-solid fa-arrow-left me-2"></i> <span data-i18n="btn-back">Ana Sayfaya Dön</span>
         </a>
       </div>
-      <div class="col-lg-6 order-1 order-lg-2 scroll-reveal reveal-right text-center w-100">
+      <div class="col-lg-6 order-1 order-lg-2 scroll-reveal reveal-right text-center">
         <div id="carouselAlestarov2" class="carousel slide vehicle-carousel" data-bs-ride="carousel" data-bs-interval="3000">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -394,7 +385,7 @@
 <section id="alestarov" class="section" style="background: rgba(255,255,255,0.02);">
   <div class="container">
     <div class="row align-items-center g-5">
-      <div class="col-lg-6 scroll-reveal reveal-left text-center w-100">
+      <div class="col-lg-6 scroll-reveal reveal-left text-center">
         <div id="carouselAlestarov" class="carousel slide vehicle-carousel" data-bs-ride="carousel" data-bs-interval="3000">
           <div class="carousel-inner">
             <div class="carousel-item active">
