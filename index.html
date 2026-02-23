@@ -80,36 +80,57 @@
     .btn-neon{border:1px solid var(--accent); color:var(--text-0); box-shadow:var(--shadow-neon); transition:transform .2s ease, box-shadow .2s ease; background:linear-gradient(180deg, rgba(0,123,255,0.08), rgba(0,123,255,0.02));}
     .btn-neon:hover{transform:translateY(-2px); box-shadow:0 0 32px rgba(0,123,255,0.45); background-color:#0056b3; border-color:#0056b3; color: white;}
     
-/* Araç Slider Görselleri (Boyutlar Orjinaline Döndürüldü) */
+/* --- ARAÇ SLIDER GÖRSELLERİ (TAM BOYUT KESİN ÇÖZÜM) --- */
     .vehicle-carousel {
-      width: 100%; /* Kartın tamamını kaplamasını garantiliyoruz */
+      width: 100% !important;
+      display: block !important;
       border-radius: 16px;
       border: 2px solid rgba(255,255,255,0.1);
       box-shadow: 0 10px 30px rgba(0,0,0,0.5);
       transition: transform 0.3s ease, border-color 0.3s ease;
       overflow: hidden; 
-      display: block;
+      background-color: var(--bg-0); /* Geçişlerde arkada boşluk görünmemesi için */
     }
+    
     .vehicle-carousel:hover { 
       transform: scale(1.02); 
       border-color: rgba(0,123,255,0.3); 
     }
+
+    /* Bootstrap'in daraltmalarını engelliyoruz */
+    .vehicle-carousel .carousel-inner,
+    .vehicle-carousel .carousel-item {
+      width: 100% !important;
+      height: 100% !important;
+    }
+
     .vehicle-img-slide {
-      width: 100%;
-      height: auto; /* Orjinal yüksekliğini korur */
-      /* aspect-ratio kısıtlaması tamamen kaldırıldı ki resimler küçülmesin */
+      width: 100% !important;
+      height: auto !important; /* Orijinal yüksekliği neyse ona göre uzatır */
+      display: block !important;
       object-fit: cover;
     }
     
     /* Slider Oklarının Tasarımı */
+    .carousel-control-prev,
+    .carousel-control-next {
+      opacity: 0.2;
+      transition: opacity 0.3s ease;
+    }
+    .vehicle-carousel:hover .carousel-control-prev,
+    .vehicle-carousel:hover .carousel-control-next {
+      opacity: 0.9; /* Sadece fareyle üzerine gelince oklar belirginleşsin */
+    }
+
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.7);
       border-radius: 50%;
-      padding: 1.2rem;
+      padding: 1.5rem; /* Okların tıklama alanını büyüttük */
       background-size: 50%;
       backdrop-filter: blur(4px);
     }
+    
   
   
     .vehicle-img:hover { transform: scale(1.02); border-color: rgba(0,123,255,0.3); }
