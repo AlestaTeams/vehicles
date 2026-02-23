@@ -23,6 +23,7 @@
       --accent:#007bff; 
       --accent-2:#ff3864;
       --shadow-neon:0 0 24px rgba(0,123,255,0.25);
+      /* Yeni Lacivert Neon Rengi */
       --neon-navy: #000080; 
     }
     html,body{background:radial-gradient(1200px 800px at 10% 10%, #0d141b 0%, var(--bg-0) 35%), linear-gradient(180deg, var(--bg-0), var(--bg-1)); color:var(--text-0); font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; scroll-behavior: smooth;}
@@ -38,19 +39,23 @@
     .nav-link.active{color:var(--accent) !important;}
     .accent-bar { height:2px; background:linear-gradient(90deg, var(--accent), var(--accent-2)); box-shadow:var(--shadow-neon); width: 100%; position: absolute; bottom: 0; left: 0; }
     
-    /* Hero Stilleri */
+    /* Hero Stilleri (Güncellendi) */
     .hero{min-height:70vh; display:grid; place-items:center; text-align:center; position:relative; overflow:hidden;}
     .hero h1{font-weight:800; letter-spacing:0.5px;}
+    /* Hero görseli için özel dairesel ve animasyonlu neon çerçeve */
     .hero-img-frame {
       width: 350px; 
       height: 350px; 
       object-fit: cover; 
+      /* Tam daire yapar */
       border-radius: 50%; 
+      /* Ana site navbardaki renk geçişine uygun çerçeve */
       border: 4px solid transparent;
       background-image: linear-gradient(var(--bg-0), var(--bg-0)), 
                         linear-gradient(90deg, var(--accent), var(--accent-2));
       background-origin: border-box;
       background-clip: content-box, border-box;
+      /* Neon parlama efekti */
       box-shadow: 0 0 20px rgba(0, 123, 255, 0.4), 0 0 40px rgba(255, 56, 100, 0.2);
       margin-top: 80px; 
       margin-bottom: 24px;
@@ -59,7 +64,10 @@
     
     .hero-img-frame:hover {
       transform: scale(1.05) rotate(5deg);
-      box-shadow: 0 0 50px rgba(0, 0, 128, 1);
+      box-shadow: 0 0 30px rgba(0, 123, 255, 0.6), 0 0 60px rgba(255, 56, 100, 0.4);
+    }
+    .hero-img-frame:hover {
+        box-shadow: 0 0 50px rgba(0, 0, 128, 1);
     }
 
     /* Genel Bölüm ve Kartlar */
@@ -72,15 +80,16 @@
     .btn-neon{border:1px solid var(--accent); color:var(--text-0); box-shadow:var(--shadow-neon); transition:transform .2s ease, box-shadow .2s ease; background:linear-gradient(180deg, rgba(0,123,255,0.08), rgba(0,123,255,0.02));}
     .btn-neon:hover{transform:translateY(-2px); box-shadow:0 0 32px rgba(0,123,255,0.45); background-color:#0056b3; border-color:#0056b3; color: white;}
     
-    /* --- ARAÇ SLIDER GÖRSELLERİ (Yan Yana Uyumlu Boyut) --- */
+/* --- ARAÇ SLIDER GÖRSELLERİ (TAM BOYUT KESİN ÇÖZÜM) --- */
     .vehicle-carousel {
-      width: 100%;
+      width: 100% !important;
+      display: block !important;
       border-radius: 16px;
       border: 2px solid rgba(255,255,255,0.1);
       box-shadow: 0 10px 30px rgba(0,0,0,0.5);
       transition: transform 0.3s ease, border-color 0.3s ease;
       overflow: hidden; 
-      background-color: var(--bg-0);
+      background-color: var(--bg-0); /* Geçişlerde arkada boşluk görünmemesi için */
     }
     
     .vehicle-carousel:hover { 
@@ -88,9 +97,17 @@
       border-color: rgba(0,123,255,0.3); 
     }
 
+    /* Bootstrap'in daraltmalarını engelliyoruz */
+    .vehicle-carousel .carousel-inner,
+    .vehicle-carousel .carousel-item {
+      width: 100% !important;
+      height: 100% !important;
+    }
+
     .vehicle-img-slide {
-      width: 100%;
-      aspect-ratio: 4/3; /* Fotoğrafların yan yana dururken şık görünmesini sağlar */
+      width: 100% !important;
+      height: auto !important; /* Orijinal yüksekliği neyse ona göre uzatır */
+      display: block !important;
       object-fit: cover;
     }
     
@@ -102,17 +119,21 @@
     }
     .vehicle-carousel:hover .carousel-control-prev,
     .vehicle-carousel:hover .carousel-control-next {
-      opacity: 0.9;
+      opacity: 0.9; /* Sadece fareyle üzerine gelince oklar belirginleşsin */
     }
 
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
       background-color: rgba(0, 0, 0, 0.7);
       border-radius: 50%;
-      padding: 1.5rem;
+      padding: 1.5rem; /* Okların tıklama alanını büyüttük */
       background-size: 50%;
       backdrop-filter: blur(4px);
     }
+    
+  
+  
+    .vehicle-img:hover { transform: scale(1.02); border-color: rgba(0,123,255,0.3); }
 
     /* Animasyonlar */
     .scroll-reveal { opacity: 0; transition: all 0.9s cubic-bezier(0.25, 0.8, 0.25, 1); }
@@ -185,6 +206,7 @@
         </a>
       </div>
       <div class="col-lg-6 order-1 order-lg-2 scroll-reveal reveal-right text-center">
+        <div class="col-lg-6 order-1 order-lg-2 scroll-reveal reveal-right text-center">
         <div id="carouselCoy" class="carousel slide vehicle-carousel" data-bs-ride="carousel" data-bs-interval="3000">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -194,7 +216,7 @@
               <img src="cöy2.jpeg" class="d-block w-100 vehicle-img-slide" alt="ÇÖY Aracı 2">
             </div>
             <div class="carousel-item">
-              <img src="cöy3.jpeg" class="d-block w-100 vehicle-img-slide" alt="ÇÖY Aracı 3">
+              <img src="cöy3.jpeg" class="d-block w-100 vehicle-img-slide" alt="ÇÖY Aracı ">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselCoy" data-bs-slide="prev">
@@ -207,6 +229,7 @@
           </button>
         </div>
       </div>
+      </div>
     </div>
   </div>
 </section>
@@ -215,16 +238,17 @@
   <div class="container">
     <div class="row align-items-center g-5">
       <div class="col-lg-6 scroll-reveal reveal-left text-center">
+        <div class="col-lg-6 scroll-reveal reveal-left text-center">
         <div id="carouselFirtina" class="carousel slide vehicle-carousel" data-bs-ride="carousel" data-bs-interval="3000">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img src="FIRTINAfoto.jpeg" class="d-block w-100 vehicle-img-slide" alt="FIRTINA Aracı 1">
             </div>
             <div class="carousel-item">
-              <img src="esek4.jpeg" class="d-block w-100 vehicle-img-slide" alt="FIRTINA Aracı 2">
+              <img src="esek2.jpeg" class="d-block w-100 vehicle-img-slide" alt="FIRTINA Aracı 2">
             </div>
             <div class="carousel-item">
-              <img src="esek3.jpeg" class="d-block w-100 vehicle-img-slide" alt="FIRTINA Aracı 3">
+              <img src="esek3.jpeg" class="d-block w-100 vehicle-img-slide" alt="FIRTINA Aracı 2">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselFirtina" data-bs-slide="prev">
@@ -234,6 +258,7 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
           </button>
         </div>
+      </div>  
       </div>
       <div class="col-lg-6 scroll-reveal reveal-right text-start">
         <h2 class="fw-bold mb-2" translate="no">FIRTINA</h2>
@@ -277,6 +302,7 @@
         </a>
       </div>
       <div class="col-lg-6 order-1 order-lg-2 scroll-reveal reveal-right text-center">
+        <div class="col-lg-6 order-1 order-lg-2 scroll-reveal reveal-right text-center">
         <div id="carouselBiskuvi" class="carousel slide vehicle-carousel" data-bs-ride="carousel" data-bs-interval="3000">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -294,6 +320,7 @@
           </button>
         </div>
       </div>
+      </div>
     </div>
   </div>
 </section>
@@ -302,6 +329,7 @@
   <div class="container">
     <div class="row align-items-center g-5">
       <div class="col-lg-6 scroll-reveal reveal-left text-center">
+        <div class="col-lg-6 scroll-reveal reveal-left text-center">
         <div id="carouselGumec" class="carousel slide vehicle-carousel" data-bs-ride="carousel" data-bs-interval="3000">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -318,6 +346,7 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
           </button>
         </div>
+      </div>
       </div>
       <div class="col-lg-6 scroll-reveal reveal-right text-start">
         <h2 class="fw-bold mb-2" translate="no">GÜMEÇ</h2>
@@ -361,13 +390,17 @@
         </a>
       </div>
       <div class="col-lg-6 order-1 order-lg-2 scroll-reveal reveal-right text-center">
+        <div class="col-lg-6 order-1 order-lg-2 scroll-reveal reveal-right text-center">
         <div id="carouselAlestarov2" class="carousel slide vehicle-carousel" data-bs-ride="carousel" data-bs-interval="3000">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img src="ALSTROV2foto.jpg" class="d-block w-100 vehicle-img-slide" alt="ALESTAROV 2 Aracı 1">
             </div>
             <div class="carousel-item">
-              <img src="ALSTROV2foto2.jpg" class="d-block w-100 vehicle-img-slide" alt="ALESTAROV 2 Aracı 2">
+              <img src="alestarov22.jpeg" class="d-block w-100 vehicle-img-slide" alt="ALESTAROV 2 Aracı 2">
+            </div>
+            <div class="carousel-item">
+              <img src="alestarov23.jpeg" class="d-block w-100 vehicle-img-slide" alt="ALESTAROV 2 Aracı 2">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselAlestarov2" data-bs-slide="prev">
@@ -378,6 +411,7 @@
           </button>
         </div>
       </div>
+      </div>
     </div>
   </div>
 </section>
@@ -386,13 +420,14 @@
   <div class="container">
     <div class="row align-items-center g-5">
       <div class="col-lg-6 scroll-reveal reveal-left text-center">
+        <div class="col-lg-6 scroll-reveal reveal-left text-center">
         <div id="carouselAlestarov" class="carousel slide vehicle-carousel" data-bs-ride="carousel" data-bs-interval="3000">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img src="ALSTROVfoto.jpg" class="d-block w-100 vehicle-img-slide" alt="ALESTAROV Aracı 1">
             </div>
             <div class="carousel-item">
-              <img src="arov2.jpeg" class="d-block w-100 vehicle-img-slide" alt="ALESTAROV Aracı 2">
+              <img src="alestarov3.jpeg" class="d-block w-100 vehicle-img-slide" alt="ALESTAROV Aracı 2">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselAlestarov" data-bs-slide="prev">
@@ -402,6 +437,7 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
           </button>
         </div>
+      </div>
       </div>
       <div class="col-lg-6 scroll-reveal reveal-right text-start">
         <h2 class="fw-bold mb-2" translate="no">ALESTAROV</h2>
