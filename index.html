@@ -80,13 +80,14 @@
     .btn-neon{border:1px solid var(--accent); color:var(--text-0); box-shadow:var(--shadow-neon); transition:transform .2s ease, box-shadow .2s ease; background:linear-gradient(180deg, rgba(0,123,255,0.08), rgba(0,123,255,0.02));}
     .btn-neon:hover{transform:translateY(-2px); box-shadow:0 0 32px rgba(0,123,255,0.45); background-color:#0056b3; border-color:#0056b3; color: white;}
     
-/* Araç Slider Görselleri */
+/* Araç Slider Görselleri (Boyutlar Orjinaline Döndürüldü) */
     .vehicle-carousel {
+      width: 100%; /* Kartın tamamını kaplamasını garantiliyoruz */
       border-radius: 16px;
       border: 2px solid rgba(255,255,255,0.1);
       box-shadow: 0 10px 30px rgba(0,0,0,0.5);
       transition: transform 0.3s ease, border-color 0.3s ease;
-      overflow: hidden; /* Köşelerin yuvarlak kalmasını sağlar */
+      overflow: hidden; 
       display: block;
     }
     .vehicle-carousel:hover { 
@@ -95,10 +96,11 @@
     }
     .vehicle-img-slide {
       width: 100%;
-      height: auto;
-      aspect-ratio: 4/3; /* Tüm fotoları aynı oranda tutar, sitenin kaymasını engeller */
+      height: auto; /* Orjinal yüksekliğini korur */
+      /* aspect-ratio kısıtlaması tamamen kaldırıldı ki resimler küçülmesin */
       object-fit: cover;
     }
+    
     /* Slider Oklarının Tasarımı */
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
@@ -108,6 +110,7 @@
       background-size: 50%;
       backdrop-filter: blur(4px);
     }
+  
   
     .vehicle-img:hover { transform: scale(1.02); border-color: rgba(0,123,255,0.3); }
 
